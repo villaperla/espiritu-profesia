@@ -1,6 +1,20 @@
 {
   "recursos": [
     {
+      "titulo": "libro de ejemplo",
+      "descripcion": "Un pdf de ejemplo",
+      "categoria": "Escuela Sabática",
+      "url": "https://arxiv.org/pdf/2201.00214.pdf",
+      "fecha": "2 de septiembre de 2026"
+    },
+    {
+      "titulo": "libro de ejemplo",
+      "descripcion": "Un pdf de ejemplo",
+      "categoria": "Escuela Sabática",
+      "url": "https://arxiv.org/pdf/2201.00214.pdf",
+      "fecha": "2 de septiembre de 2026"
+    },
+    {
       "titulo": "El Camino a Cristo - Libro Completo",
       "descripcion": "Uno de los libros más queridos de Elena G. de White. Guía al lector paso a paso hacia una relación más profunda con Cristo. Ideal para nuevos creyentes y para reavivar la fe.",
       "categoria": "Adultos",
@@ -48,13 +62,6 @@
       "categoria": "Líderes",
       "url": "https://m.egwwritings.org/es/book/130.2",
       "fecha": "8 de marzo, 2026"
-    },
-    {
-      "titulo": "Consejos para Adolescentes - Identidad y Fe",
-      "descripcion": "Material para adolescentes de 12 a 15 años sobre identidad, presión social, amistad y fe. Con lenguaje actual y relevante.",
-      "categoria": "Adolescentes",
-      "url": "https://m.egwwritings.org/es/book/130.2",
-      "fecha": "12 de marzo, 2026"
     }
   ],
   "videos": [
