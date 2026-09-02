@@ -100,6 +100,9 @@ footer{background:#2D2D2D;color:var(--gray-300);padding:60px 0 20px;margin-top:6
 .footer-section p,.footer-section a{color:var(--gray-300);margin:8px 0;display:block;text-decoration:none;font-size:.85rem}
 .footer-section a:hover{color:var(--orange)}
 .footer-bottom{text-align:center;padding-top:30px;margin-top:30px;border-top:1px solid var(--gray-800);color:var(--gray-600);font-size:.8rem}
+.footer-bottom-content{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.admin-lock-btn{background:none;border:none;color:#555;font-size:.85rem;cursor:pointer;padding:4px 6px;transition:var(--transition);opacity:.5;border-radius:4px;line-height:1}
+.admin-lock-btn:hover{color:var(--orange);opacity:1;background:rgba(232,117,26,.1)}
 .social-icons{display:flex;gap:12px;margin-top:15px}
 .social-icons a{width:36px;height:36px;border:1px solid var(--gray-800);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gray-300);transition:var(--transition);text-decoration:none}
 .social-icons a:hover{border-color:var(--orange);color:var(--orange)}
@@ -136,7 +139,7 @@ footer{background:#2D2D2D;color:var(--gray-300);padding:60px 0 20px;margin-top:6
 .file-drop-zone input[type="file"]{display:none}
 .progress-container{margin-top:15px;display:none}
 .progress-bar-bg{width:100%;height:12px;background:var(--gray-200);border-radius:6px;overflow:hidden}
-.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-light,#F4984A));width:0%;transition:width .3s ease;border-radius:6px}
+.progress-bar-fill{height:100%;background:linear-gradient(90deg,var(--orange),#F4984A);width:0%;transition:width .3s ease;border-radius:6px}
 .progress-text{font-size:.85rem;color:var(--gray-600);margin-top:5px;text-align:center}
 .url-input-group{display:none}
 .url-input-group.active{display:block}
@@ -238,7 +241,12 @@ th,td{padding:10px 12px}
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; <span id="current-year"></span> Espíritu de Profecía - Misión Villa Perla. Todos los derechos reservados.</p>
+    <div class="footer-bottom-content">
+      <span>&copy; <span id="current-year"></span> Espíritu de Profecía - Misión Villa Perla. Todos los derechos reservados.</span>
+      <button class="admin-lock-btn" onclick="openAdminLogin()" title="Acceso administrativo" aria-label="Acceso administrativo">
+        <i class="fas fa-lock"></i>
+      </button>
+    </div>
   </div>
 </footer>
 
@@ -537,7 +545,6 @@ function renderIndex() {
     '<div style="margin-top:2rem;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">' +
     '<button class="btn btn-lg" onclick="navigate(\'recursos\')"><i class="fas fa-file-pdf"></i> Explorar Recursos</button>' +
     '<button class="btn btn-outline btn-lg" onclick="navigate(\'quienes_somos\')"><i class="fas fa-users"></i> Conócenos</button>' +
-    '<button class="btn btn-black btn-lg" onclick="openAdminLogin()"><i class="fas fa-lock"></i> Admin</button>' +
     '</div></div>' + modeInfo +
     '<div class="grid g4">' +
     '<div class="card stat-card fade-in"><p class="stat-number">' + (DATA.recursos || []).length + '</p><p class="stat-label">Recursos PDF</p></div>' +
@@ -738,7 +745,7 @@ function renderAdminDashboard() {
   '<button class="btn btn-black btn-sm" onclick="forceReloadData()"><i class="fas fa-sync"></i> Recargar Datos</button>' +
   '</div></div>' +
   '<div class="card" style="border-left:4px solid var(--orange)"><h3><i class="fas fa-cloud-upload-alt" style="color:var(--orange)"></i> Subida de PDFs</h3>' +
-  '<p style="margin-top:.5rem;line-height:1.8">Ahora puedes <strong>subir archivos PDF directamente</strong> desde tu dispositivo. Los archivos se guardan en la carpeta <code>/pdfs/</code> de tu repositorio de GitHub y se pueden leer directamente en la página.</p>' +
+  '<p style="margin-top:.5rem;line-height:1.8">Puedes <strong>subir archivos PDF directamente</strong> desde tu dispositivo. Los archivos se guardan en la carpeta <code>/pdfs/</code> de tu repositorio de GitHub y se pueden leer directamente en la página.</p>' +
   '<ul style="margin-top:.5rem;margin-left:1.5rem;line-height:2">' +
   '<li>Tamaño máximo por archivo: <strong>50 MB</strong></li>' +
   '<li>Solo se permiten archivos <strong>.pdf</strong></li>' +
@@ -1398,6 +1405,10 @@ async function deleteCategoria(i) {
 }
 
 function openAdminLogin() {
+  if (ADMIN_MODE) {
+    navigate('admin_dashboard');
+    return;
+  }
   if (CONFIG.token && CONFIG.repo) {
     document.getElementById('adminTokenInput').value = CONFIG.token;
     document.getElementById('adminRepoInput').value = CONFIG.repo;
