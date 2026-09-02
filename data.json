@@ -1,0 +1,208 @@
+{
+  "recursos": [
+    {
+      "titulo": "El Camino a Cristo - Libro Completo",
+      "descripcion": "Uno de los libros más queridos de Elena G. de White. Guía al lector paso a paso hacia una relación más profunda con Cristo. Ideal para nuevos creyentes y para reavivar la fe.",
+      "categoria": "Adultos",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "15 de enero, 2026"
+    },
+    {
+      "titulo": "El Conflicto de los Siglos - Introducción",
+      "descripcion": "Introducción al gran conflicto entre Cristo y Satanás. Un vistazo al libro que explica la historia del mundo desde la perspectiva bíblica.",
+      "categoria": "Adultos",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "20 de enero, 2026"
+    },
+    {
+      "titulo": "Historias Bíblicas para Niños - Vol. 1",
+      "descripcion": "Colección de historias bíblicas adaptadas para niños de 6 a 10 años. Con ilustraciones y actividades para hacer el estudio divertido.",
+      "categoria": "Infantil",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "5 de febrero, 2026"
+    },
+    {
+      "titulo": "Guía de Estudio para Jóvenes - Fe y Propósito",
+      "descripcion": "Material diseñado para jóvenes de 15 a 25 años que buscan encontrar su propósito en Dios. Incluye preguntas de reflexión y desafíos prácticos.",
+      "categoria": "Jóvenes",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "10 de febrero, 2026"
+    },
+    {
+      "titulo": "El Matrimonio Cristiano - Fundamentos",
+      "descripcion": "Principios bíblicos para construir un matrimonio sólido. Comunicación, finanzas, crianza y vida espiritual en pareja.",
+      "categoria": "Matrimonios",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "18 de febrero, 2026"
+    },
+    {
+      "titulo": "Manual para Líderes de Escuela Sabática",
+      "descripcion": "Guía práctica para maestros y líderes de Escuela Sabática. Técnicas de enseñanza, planificación de lecciones y dinámicas de grupo.",
+      "categoria": "Escuela Sabática",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "25 de febrero, 2026"
+    },
+    {
+      "titulo": "Devocional Familiar - 30 Días",
+      "descripcion": "Un mes de devocionales para toda la familia. Cada día incluye lectura bíblica, reflexión, actividad y oración.",
+      "categoria": "Familias",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "1 de marzo, 2026"
+    },
+    {
+      "titulo": "El Deseado de Todas las Gentes - Resumen por Capítulos",
+      "descripcion": "Resumen y análisis capítulo por capítulo del libro sobre la vida de Cristo. Ideal para grupos de estudio.",
+      "categoria": "Líderes",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "8 de marzo, 2026"
+    },
+    {
+      "titulo": "Consejos para Adolescentes - Identidad y Fe",
+      "descripcion": "Material para adolescentes de 12 a 15 años sobre identidad, presión social, amistad y fe. Con lenguaje actual y relevante.",
+      "categoria": "Adolescentes",
+      "url": "https://m.egwwritings.org/es/book/130.2",
+      "fecha": "12 de marzo, 2026"
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "¿Qué es el Espíritu de Profecía?",
+      "descripcion": "Explicación clara y bíblica sobre el don de profecía en los últimos días y su manifestación en el ministerio de Elena G. de White.",
+      "categoria": "Adultos",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "10 de enero, 2026"
+    },
+    {
+      "titulo": "Serie: Vida de Elena G. de White - Episodio 1",
+      "descripcion": "Primer episodio de la serie documental sobre la vida de Elena G. de White. Su infancia, el accidente y su llamado.",
+      "categoria": "Adultos",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "15 de enero, 2026"
+    },
+    {
+      "titulo": "Seminario: Cómo Estudiar los Escritos de Elena White",
+      "descripcion": "Taller práctico sobre métodos de estudio, contexto histórico y aplicación de los escritos del Espíritu de Profecía.",
+      "categoria": "Líderes",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "22 de enero, 2026"
+    },
+    {
+      "titulo": "Historias de Jesús para Niños - El Buen Pastor",
+      "descripcion": "Video animado con la historia del Buen Pastor adaptada para niños. Incluye canción y actividad manual.",
+      "categoria": "Infantil",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "1 de febrero, 2026"
+    },
+    {
+      "titulo": "Jóvenes y Profecía: Preguntas y Respuestas",
+      "descripcion": "Panel de jóvenes haciendo preguntas sobre profecía con respuestas de pastores y especialistas.",
+      "categoria": "Jóvenes",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "8 de febrero, 2026"
+    },
+    {
+      "titulo": "Culto Familiar: Cómo Implementarlo",
+      "descripcion": "Guía práctica para establecer el culto familiar como hábito diario. Consejos, horarios y recursos.",
+      "categoria": "Familias",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "15 de febrero, 2026"
+    },
+    {
+      "titulo": "Estudio Bíblico: El Santuario Celestial",
+      "descripcion": "Estudio profundo sobre la doctrina del santuario y su relación con los escritos del Espíritu de Profecía.",
+      "categoria": "Escuela Sabática",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "22 de febrero, 2026"
+    },
+    {
+      "titulo": "Serie: El Conflicto de los Siglos - Episodio 1",
+      "descripcion": "Inicio de la serie sobre el gran conflicto. La caída de Lucifer y el origen del mal.",
+      "categoria": "Adultos",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "fecha": "1 de marzo, 2026"
+    }
+  ],
+  "eventos": [
+    {
+      "titulo": "Seminario de Espíritu de Profecía",
+      "fecha": "20 de septiembre, 2026",
+      "hora": "9:00 AM - 5:00 PM",
+      "lugar": "Templo Central, Misión Villa Perla",
+      "descripcion": "Seminario intensivo de un día sobre la importancia del Espíritu de Profecía en la iglesia remanente. Incluye talleres, preguntas y respuestas, y materiales de estudio.\n\nTemas:\n• El don de profecía en la Biblia\n• La vida y ministerio de Elena G. de White\n• Cómo aplicar los escritos en la vida diaria\n• Respondiendo a objeciones comunes",
+      "url": ""
+    },
+    {
+      "titulo": "Taller de Lectura Diaria",
+      "fecha": "4 de octubre, 2026",
+      "hora": "10:00 AM - 1:00 PM",
+      "lugar": "Salón de Reuniones, Misión Villa Perla",
+      "descripcion": "Taller práctico para establecer el hábito de la lectura diaria de la Biblia y los escritos del Espíritu de Profecía.\n\nIncluye:\n• Planes de lectura personalizados\n• Aplicaciones y recursos digitales\n• Grupos de lectura comunitaria\n• Material impreso gratuito",
+      "url": ""
+    },
+    {
+      "titulo": "Distribución de Libros - Comunidad",
+      "fecha": "18 de octubre, 2026",
+      "hora": "8:00 AM - 12:00 PM",
+      "lugar": "Parque Central, Villa Perla",
+      "descripcion": "Gran jornada de distribución gratuita de libros del Espíritu de Profecía a la comunidad.\n\nLibros disponibles:\n• El Camino a Cristo\n• El Conflicto de los Siglos (selección)\n• Folletos evangelísticos\n• Material para niños\n\n¡Voluntarios bienvenidos! Contactar al coordinador para inscribirse.",
+      "url": ""
+    },
+    {
+      "titulo": "Capacitación para Líderes de Ministerio",
+      "fecha": "1 de noviembre, 2026",
+      "hora": "2:00 PM - 6:00 PM",
+      "lugar": "Auditorio de la Misión",
+      "descripcion": "Capacitación especial para pastores, ancianos, líderes de ministerios y maestros de Escuela Sabática.\n\nContenido:\n• Cómo integrar el Espíritu de Profecía en la predicación\n• Liderazgo basado en principios bíblicos\n• Manejo de grupos de estudio\n• Recursos y materiales disponibles",
+      "url": ""
+    },
+    {
+      "titulo": "Retiro Espiritual de Jóvenes",
+      "fecha": "15 de noviembre, 2026",
+      "hora": "Viernes 6:00 PM - Domingo 12:00 PM",
+      "lugar": "Campamento El Pinar",
+      "descripcion": "Retiro de fin de semana para jóvenes de 15 a 30 años.\n\nActividades:\n• Estudios bíblicos sobre profecía\n• Talleres de vida cristiana práctica\n• Actividades al aire libre\n• Música y adoración\n• Fogata testimonial\n\nCupo limitado. Inscripción con el coordinador de jóvenes.",
+      "url": ""
+    },
+    {
+      "titulo": "Semana de Oración y Estudio",
+      "fecha": "23 al 28 de noviembre, 2026",
+      "hora": "7:00 PM - 9:00 PM",
+      "lugar": "Templo Central, Misión Villa Perla",
+      "descripcion": "Seis noches de oración, estudio bíblico y meditación en los escritos del Espíritu de Profecía.\n\nCada noche:\n• 7:00 PM - Alabanza y adoración\n• 7:30 PM - Estudio bíblico temático\n• 8:15 PM - Lectura de Elena G. de White\n• 8:45 PM - Oración intercesora\n\n¡Trae tu Biblia y tu libreta!",
+      "url": ""
+    }
+  ],
+  "libro_ano": {
+    "titulo": "El Camino a Cristo",
+    "autor": "Elena G. de White",
+    "descripcion": "Este año hemos seleccionado 'El Camino a Cristo' como nuestro Libro del Año. Esta obra maestra de Elena G. de White es una guía práctica y espiritual que conduce al lector paso a paso hacia una relación íntima con Jesucristo.\n\nCon 13 capítulos llenos de sabiduría bíblica, el libro aborda temas fundamentales como:\n\n• El amor de Dios por la humanidad\n• La necesidad de arrepentimiento\n• La fe y la aceptación\n• La conversión genuina\n• La vida de oración\n• El crecimiento espiritual\n• Cómo vencer la duda\n• El privilegio del servicio\n\nEste libro es ideal tanto para nuevos creyentes como para cristianos maduros que desean profundizar su caminar con Dios. Su lenguaje claro y sus ejemplos prácticos lo hacen accesible para toda la familia.\n\nTe invitamos a leerlo durante este año, reflexionar en sus enseñanzas y compartirlo con otros. ¡Que Dios bendiga tu estudio!",
+    "url": "https://m.egwwritings.org/es/book/130.2",
+    "cuestionario_url": "https://forms.gle/ejemplo123456"
+  },
+  "quienes_somos": {
+    "titulo": "Departamento de Espíritu de Profecía",
+    "historia": "El Departamento de Espíritu de Profecía de la Misión Villa Perla fue establecido en el año 2018 con el propósito de promover el estudio sistemático y la difusión de los escritos inspirados de Elena G. de White.\n\nDesde su fundación, el departamento ha trabajado incansablemente para:\n\n• Distribuir miles de libros y folletos a la comunidad\n• Organizar seminarios y talleres de capacitación\n• Formar líderes comprometidos con el estudio de la Palabra\n• Establecer grupos de lectura en cada congregación\n\nNuestro equipo está conformado por voluntarios apasionados que creen firmemente en la vigencia del don de profecía en la iglesia remanente de Dios.",
+    "mision": "Fomentar el estudio diario de la Biblia y los escritos del Espíritu de Profecía en cada hogar de la Misión Villa Perla, fortaleciendo la fe de los creyentes y preparando al pueblo para la pronta venida de Cristo.",
+    "vision": "Cada miembro de la Misión Villa Perla arraigado en la Palabra de Dios, nutrido por los escritos del Espíritu de Profecía y comprometido con la misión de compartir el evangelio eterno.",
+    "objetivos": "1. Distribuir libros y materiales del Espíritu de Profecía a todas las congregaciones y la comunidad\n2. Organizar seminarios, talleres y eventos de capacitación trimestralmente\n3. Capacitar a líderes y maestros en el uso correcto de los escritos de Elena G. de White\n4. Promover el hábito de la lectura diaria de la Biblia y el Espíritu de Profecía\n5. Establecer bibliotecas y centros de recursos en cada iglesia local\n6. Desarrollar materiales de estudio adaptados para todas las edades\n7. Utilizar medios digitales para ampliar el alcance del departamento\n8. Colaborar con otros departamentos de la Misión en programas integrados"
+  },
+  "informacion": {
+    "direccion": "Misión Villa Perla, Calle Principal #123, Villa Perla",
+    "telefono": "+53 58604308",
+    "email": "prluisgzsantana@villaperla.org",
+    "horario": "Lunes a Viernes: 8:00 AM - 5:00 PM | Sábados: 9:00 AM - 12:00 PM",
+    "coordinador": "Pr. José Luis González Santana",
+    "facebook": "https://facebook.com/EspirituDeProfeciaVillaPerla",
+    "youtube": "https://youtube.com/@EspirituDeProfeciaVillaPerla"
+  },
+  "categorias_recursos": [
+    "Infantil",
+    "Adolescentes",
+    "Jóvenes",
+    "Adultos",
+    "Matrimonios",
+    "Familias",
+    "Líderes",
+    "Escuela Sabática"
+  ]
+}
