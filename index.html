@@ -12,7 +12,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--orange:#E8751A;--orange-dark:#C45D0E;--black:#333;--white:#fff;--gray-50:#FAFAFA;--gray-100:#F5F5F5;--gray-200:#E5E5E5;--gray-300:#D4D4D4;--gray-600:#666;--gray-800:#333;--shadow:0 4px 12px rgba(0,0,0,.08);--radius:4px;--radius-lg:8px;--transition:all .25s ease}
+:root{--orange:#E8751A;--orange-dark:#C45D0E;--black:#333;--white:#fff;--gray-50:#FAFAFA;--gray-100:#F5F5F5;--gray-200:#E5E5E5;--gray-300:#D4D4D4;--gray-600:#666;--gray-800:#333;--shadow:0 4px 12px rgba(0,0,0,.08);--radius:4px;--radius-lg:8px;--transition:all .25s ease;--success:#27ae60;--danger:#c0392b;--info:#3498db;--warning:#f39c12}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Open Sans',sans-serif;background:var(--white);color:var(--black);line-height:1.7;font-size:16px}
 h1,h2,h3,h4,h5,h6{font-family:'Merriweather',serif;color:var(--black);line-height:1.3}
@@ -61,10 +61,15 @@ header{background:var(--white);border-bottom:3px solid var(--orange);position:st
 .btn-outline:hover{background:var(--orange);color:var(--white)}
 .btn-black{background:var(--black);border-color:var(--black);color:var(--white)}
 .btn-black:hover{background:#555;border-color:#555}
-.btn-danger{background:#c0392b;border-color:#c0392b;color:#fff}
+.btn-danger{background:var(--danger);border-color:var(--danger);color:#fff}
 .btn-danger:hover{background:#a93226;border-color:#a93226}
+.btn-success{background:var(--success);border-color:var(--success);color:#fff}
+.btn-success:hover{background:#219a52;border-color:#219a52}
+.btn-info{background:var(--info);border-color:var(--info);color:#fff}
+.btn-info:hover{background:#2980b9;border-color:#2980b9}
 .btn-sm{padding:8px 18px;font-size:.75rem}
 .btn-lg{padding:16px 36px;font-size:.95rem}
+.btn-xs{padding:5px 12px;font-size:.7rem}
 .form-group{margin-bottom:1.5rem}
 label{display:block;margin-bottom:.5rem;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
 input,textarea,select{width:100%;padding:14px 16px;border:2px solid var(--gray-200);border-radius:var(--radius);font-size:1rem;font-family:'Open Sans',sans-serif;transition:var(--transition);background:var(--gray-50)}
@@ -80,10 +85,10 @@ table{width:100%;border-collapse:collapse;background:var(--white);font-size:.9re
 th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--gray-200)}
 th{background:#3A3A3A;color:var(--white);font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:.75rem}
 .alert{padding:16px 20px;border-radius:var(--radius);margin-bottom:1rem;font-weight:600;display:flex;align-items:center;gap:10px;font-size:.9rem;flex-wrap:wrap}
-.alert-success{background:#F0F9F0;color:#1A7A1A;border-left:4px solid #1A7A1A}
-.alert-error{background:#FFF0F0;color:#C41E1E;border-left:4px solid #C41E1E}
-.alert-info{background:#EFF6FF;color:#1e40af;border-left:4px solid #1e40af}
-.alert-warning{background:#FFF8E1;color:#856404;border-left:4px solid #ffc107}
+.alert-success{background:#F0F9F0;color:#1A7A1A;border-left:4px solid var(--success)}
+.alert-error{background:#FFF0F0;color:#C41E1E;border-left:4px solid var(--danger)}
+.alert-info{background:#EFF6FF;color:#1e40af;border-left:4px solid var(--info)}
+.alert-warning{background:#FFF8E1;color:#856404;border-left:4px solid var(--warning)}
 .admin-nav{background:var(--gray-100);padding:12px;border-radius:var(--radius);margin-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:6px}
 .admin-nav a{padding:8px 16px;background:var(--white);color:var(--black);text-decoration:none;border-radius:var(--radius);font-weight:600;font-size:.78rem;text-transform:uppercase;border:1px solid var(--gray-200);transition:var(--transition);cursor:pointer}
 .admin-nav a:hover,.admin-nav a.active{background:var(--orange);color:var(--white);border-color:var(--orange)}
@@ -124,7 +129,7 @@ footer{background:#2D2D2D;color:var(--gray-300);padding:60px 0 20px;margin-top:6
 .admin-status-bar{background:linear-gradient(90deg,#1a1a2e,#16213e);color:#fff;padding:12px 20px;text-align:center;font-size:.9rem;display:none;position:sticky;top:0;z-index:999}
 .admin-status-bar.active{display:block}
 .admin-status-bar i{color:var(--orange);margin-right:8px}
-.admin-status-bar button{background:#c0392b;color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;margin-left:15px;font-size:.8rem;font-weight:600}
+.admin-status-bar button{background:var(--danger);color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;margin-left:15px;font-size:.8rem;font-weight:600}
 .admin-status-bar button:hover{background:#a93226}
 .radio-group{display:flex;gap:15px;flex-wrap:wrap;margin-bottom:1rem}
 .radio-option{display:flex;align-items:center;gap:8px;cursor:pointer;padding:10px 16px;border:2px solid var(--gray-200);border-radius:var(--radius);transition:var(--transition);font-size:.9rem;font-weight:600}
@@ -146,6 +151,73 @@ footer{background:#2D2D2D;color:var(--gray-300);padding:60px 0 20px;margin-top:6
 .upload-group{display:block}
 .upload-group.hidden{display:none}
 .btn-group-inline{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.pending-badge{display:inline-flex;align-items:center;justify-content:center;background:#e74c3c;color:#fff;border-radius:50%;width:20px;height:20px;font-size:.7rem;font-weight:700;margin-left:6px}
+.pending-bar{background:linear-gradient(90deg,#fff3cd,#ffeaa7);border:2px solid var(--warning);border-radius:var(--radius-lg);padding:15px 20px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.pending-bar-text{color:#856404;font-weight:700;font-size:.95rem}
+.pending-bar-text i{color:var(--warning);margin-right:8px}
+.change-item{background:var(--white);border:1px solid var(--gray-200);border-left:4px solid var(--warning);border-radius:var(--radius);padding:15px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.change-item.add{border-left-color:var(--success)}
+.change-item.edit{border-left-color:var(--info)}
+.change-item.delete{border-left-color:var(--danger)}
+.change-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0}
+.change-icon.add{background:var(--success)}
+.change-icon.edit{background:var(--info)}
+.change-icon.delete{background:var(--danger)}
+.change-info{flex:1;min-width:200px}
+.change-info h4{font-size:.95rem;margin-bottom:3px}
+.change-info p{font-size:.8rem;color:var(--gray-600)}
+.change-preview{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:10px;margin-top:8px;font-size:.85rem}
+.change-preview strong{color:var(--orange)}
+.pdf-fullscreen-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:5000;display:none;flex-direction:column}
+.pdf-fullscreen-modal.active{display:flex}
+.pdf-fullscreen-header{background:#1a1a2e;color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.pdf-fullscreen-header h3{font-size:1rem;color:#fff;margin:0}
+.pdf-fullscreen-header .btn-group{display:flex;gap:8px}
+.pdf-fullscreen-body{flex:1;overflow:hidden;position:relative}
+.pdf-fullscreen-body iframe{width:100%;height:100%;border:none;background:#525659}
+.pdf-fullscreen-loading{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;text-align:center}
+.toast-container{position:fixed;top:20px;right:20px;z-index:10000;display:flex;flex-direction:column;gap:10px;max-width:400px}
+.toast{background:var(--white);border-radius:var(--radius-lg);padding:16px 20px;box-shadow:0 8px 30px rgba(0,0,0,.15);display:flex;align-items:flex-start;gap:12px;animation:slideInRight .3s ease;min-width:300px;border-left:4px solid var(--gray-300)}
+.toast.success{border-left-color:var(--success)}
+.toast.error{border-left-color:var(--danger)}
+.toast.info{border-left-color:var(--info)}
+.toast.warning{border-left-color:var(--warning)}
+.toast-icon{font-size:1.2rem;flex-shrink:0}
+.toast.success .toast-icon{color:var(--success)}
+.toast.error .toast-icon{color:var(--danger)}
+.toast.info .toast-icon{color:var(--info)}
+.toast.warning .toast-icon{color:var(--warning)}
+.toast-content{flex:1}
+.toast-title{font-weight:700;font-size:.9rem;margin-bottom:3px}
+.toast-message{font-size:.85rem;color:var(--gray-600)}
+.toast-close{background:none;border:none;color:var(--gray-300);cursor:pointer;font-size:1rem;padding:0;line-height:1}
+.toast-close:hover{color:var(--black)}
+@keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+.toast.hiding{animation:slideOutRight .3s ease forwards}
+@keyframes slideOutRight{from{transform:translateX(0);opacity:1}to{transform:translateX(100%);opacity:0}}
+.history-item{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:15px;margin-bottom:10px}
+.history-item-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+.history-item-date{font-weight:700;color:var(--orange);font-size:.9rem}
+.history-item-status{padding:4px 12px;border-radius:12px;font-size:.7rem;font-weight:700;text-transform:uppercase}
+.history-item-status.success{background:#d4edda;color:#155724}
+.history-item-status.error{background:#f8d7da;color:#721c24}
+.history-item-details{font-size:.85rem;color:var(--gray-600)}
+.reorder-btns{display:flex;flex-direction:column;gap:2px}
+.reorder-btn{background:none;border:1px solid var(--gray-200);border-radius:3px;width:24px;height:20px;cursor:pointer;font-size:.7rem;color:var(--gray-600);display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.reorder-btn:hover{border-color:var(--orange);color:var(--orange);background:rgba(232,117,26,.05)}
+.reorder-btn:disabled{opacity:.3;cursor:not-allowed}
+.connection-status{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;padding:3px 10px;border-radius:12px;font-weight:600}
+.connection-status.online{background:#d4edda;color:#155724}
+.connection-status.offline{background:#f8d7da;color:#721c24}
+.connection-status.checking{background:#fff3cd;color:#856404}
+.confirm-modal{z-index:6000}
+.confirm-summary{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:15px;margin:15px 0;max-height:300px;overflow-y:auto}
+.confirm-summary-item{padding:8px 0;border-bottom:1px solid var(--gray-200);font-size:.9rem}
+.confirm-summary-item:last-child{border-bottom:none}
+.confirm-summary-item i{margin-right:8px;width:16px}
+.confirm-summary-item.add i{color:var(--success)}
+.confirm-summary-item.edit i{color:var(--info)}
+.confirm-summary-item.delete i{color:var(--danger)}
 @media(max-width:768px){
 .nav-desktop{display:none}
 .hamburger{display:block}
@@ -163,6 +235,12 @@ th,td{padding:10px 12px}
 .header-content{padding:12px 16px}
 .radio-group{flex-direction:column}
 .file-drop-zone{padding:20px}
+.pending-bar{flex-direction:column;text-align:center}
+.change-item{flex-direction:column;text-align:center}
+.toast-container{left:20px;right:20px;max-width:none}
+.toast{min-width:auto}
+.pdf-fullscreen-header{flex-direction:column;gap:10px}
+.pdf-fullscreen-header .btn-group{flex-wrap:wrap;justify-content:center}
 }
 @media(min-width:769px){
 .sidebar,.sidebar-overlay{display:none !important}
@@ -173,9 +251,15 @@ th,td{padding:10px 12px}
 
 <div id="loading"><i class="fas fa-spinner fa-spin" style="font-size:2rem"></i><br><br>Cargando contenido...</div>
 
+<div class="toast-container" id="toastContainer"></div>
+
 <div class="admin-status-bar" id="adminStatusBar">
   <i class="fas fa-shield-alt"></i> Modo Administrador Activo
   <span class="mode-badge mode-admin">GitHub conectado</span>
+  <span id="connectionStatus" class="connection-status checking"><i class="fas fa-circle-notch fa-spin"></i> Verificando</span>
+  <span id="pendingCountBadge" style="display:none;background:var(--warning);color:#fff;padding:2px 10px;border-radius:12px;font-size:.75rem;margin-left:10px">
+    <i class="fas fa-clock"></i> <span id="pendingCountText">0</span> cambios pendientes
+  </span>
   <button onclick="adminLogout()"><i class="fas fa-sign-out-alt"></i> Salir</button>
 </div>
 
@@ -250,21 +334,21 @@ th,td{padding:10px 12px}
   </div>
 </footer>
 
-<div class="modal" id="pdfModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="pdfModalTitle">Documento PDF</h3>
-      <button class="modal-close" onclick="closePdfModal()"><i class="fas fa-times"></i></button>
+<div class="pdf-fullscreen-modal" id="pdfFullscreenModal">
+  <div class="pdf-fullscreen-header">
+    <h3 id="pdfFullscreenTitle">Documento PDF</h3>
+    <div class="btn-group">
+      <a id="pdfFullscreenDownload" href="#" target="_blank" class="btn btn-sm"><i class="fas fa-download"></i> Descargar</a>
+      <a id="pdfFullscreenOpen" href="#" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Nueva pestaña</a>
+      <button onclick="closePdfFullscreen()" class="btn btn-black btn-sm"><i class="fas fa-times"></i> Cerrar</button>
     </div>
-    <div class="modal-body">
-      <iframe id="pdfIframe" class="pdf-viewer"></iframe>
+  </div>
+  <div class="pdf-fullscreen-body">
+    <div class="pdf-fullscreen-loading" id="pdfFullscreenLoading">
+      <i class="fas fa-spinner fa-spin" style="font-size:2rem"></i><br>
+      Cargando documento...
     </div>
-    <div class="modal-actions">
-      <a id="pdfDownloadBtn" href="#" target="_blank" class="btn btn-sm"><i class="fas fa-download"></i> Descargar</a>
-      <a id="pdfOpenBtn" href="#" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Nueva pestaña</a>
-      <button id="pdfAltViewerBtn" onclick="switchPdfViewer()" class="btn btn-black btn-sm" style="display:none"><i class="fas fa-sync"></i> Visor alternativo</button>
-      <button onclick="closePdfModal()" class="btn btn-black btn-sm">Cerrar</button>
-    </div>
+    <iframe id="pdfFullscreenIframe" style="display:none"></iframe>
   </div>
 </div>
 
@@ -297,6 +381,49 @@ th,td{padding:10px 12px}
   </div>
 </div>
 
+<div class="modal confirm-modal" id="confirmPublishModal">
+  <div class="modal-content" style="max-width:600px">
+    <div class="modal-header">
+      <h3><i class="fas fa-cloud-upload-alt"></i> Confirmar Publicación</h3>
+      <button class="modal-close" onclick="closeConfirmPublish()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body padded">
+      <div class="alert alert-warning">
+        <i class="fas fa-exclamation-triangle"></i>
+        Estás a punto de publicar <strong id="confirmCount">0</strong> cambio(s) en GitHub. Esta acción actualizará la página pública.
+      </div>
+      <h4 style="margin-bottom:10px"><i class="fas fa-list-check" style="color:var(--orange)"></i> Resumen de cambios:</h4>
+      <div class="confirm-summary" id="confirmSummary"></div>
+      <div class="form-group" style="margin-top:15px">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;font-size:.9rem">
+          <input type="checkbox" id="confirmCheck"> 
+          Confirmo que he revisado los cambios y deseo publicarlos
+        </label>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button onclick="closeConfirmPublish()" class="btn btn-black"><i class="fas fa-times"></i> Cancelar</button>
+      <button onclick="executePublish()" class="btn btn-success" id="btnConfirmPublish" disabled><i class="fas fa-cloud-upload-alt"></i> Publicar Ahora</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="historyModal">
+  <div class="modal-content" style="max-width:700px">
+    <div class="modal-header">
+      <h3><i class="fas fa-history"></i> Historial de Publicaciones</h3>
+      <button class="modal-close" onclick="closeHistory()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body padded" id="historyContent">
+      <p style="text-align:center;color:var(--gray-600)">Cargando historial...</p>
+    </div>
+    <div class="modal-actions">
+      <button onclick="clearHistory()" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Limpiar Historial</button>
+      <button onclick="closeHistory()" class="btn btn-black">Cerrar</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const CONFIG = {
   dataUrl: 'data.json',
@@ -310,6 +437,9 @@ let ADMIN_MODE = false;
 let CURRENT_PAGE = 'index';
 let DATA_SOURCE = 'local';
 let CURRENT_PDF_URL = '';
+let pendingChanges = [];
+let changeIdCounter = 1;
+let publishHistory = [];
 
 const DEFAULT_DATA = {
   "recursos": [],
@@ -334,6 +464,30 @@ const DEFAULT_DATA = {
   },
   "categorias_recursos": ["Infantil","Adolescentes","Jóvenes","Adultos","Matrimonios","Familias","Líderes","Escuela Sabática"]
 };
+
+function showToast(type, title, message, duration = 5000) {
+  const container = document.getElementById('toastContainer');
+  const toast = document.createElement('div');
+  toast.className = 'toast ' + type;
+  
+  const icons = { success: 'check-circle', error: 'exclamation-circle', info: 'info-circle', warning: 'exclamation-triangle' };
+  
+  toast.innerHTML = `
+    <div class="toast-icon"><i class="fas fa-${icons[type] || 'info-circle'}"></i></div>
+    <div class="toast-content">
+      <div class="toast-title">${title}</div>
+      <div class="toast-message">${message}</div>
+    </div>
+    <button class="toast-close" onclick="this.parentElement.remove()"><i class="fas fa-times"></i></button>
+  `;
+  
+  container.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.classList.add('hiding');
+    setTimeout(() => toast.remove(), 300);
+  }, duration);
+}
 
 async function loadData() {
   try {
@@ -401,40 +555,42 @@ function isGithubRawUrl(url) {
   return url && url.includes('raw.githubusercontent.com');
 }
 
-function openPdfModal(title, url) {
+function openPdfFullscreen(title, url) {
   CURRENT_PDF_URL = url;
-  document.getElementById('pdfModalTitle').textContent = title || 'Documento PDF';
-  const iframe = document.getElementById('pdfIframe');
-  const altBtn = document.getElementById('pdfAltViewerBtn');
-
+  document.getElementById('pdfFullscreenTitle').textContent = title || 'Documento PDF';
+  document.getElementById('pdfFullscreenDownload').href = url;
+  document.getElementById('pdfFullscreenOpen').href = url;
+  
+  const iframe = document.getElementById('pdfFullscreenIframe');
+  const loading = document.getElementById('pdfFullscreenLoading');
+  
+  loading.style.display = 'block';
+  iframe.style.display = 'none';
+  
+  let viewerUrl;
   if (isGithubRawUrl(url)) {
-    iframe.src = url;
-    altBtn.style.display = 'none';
+    viewerUrl = url;
   } else {
-    iframe.src = 'https://docs.google.com/gview?embedded=true&url=' + encodeURIComponent(url);
-    altBtn.style.display = 'inline-flex';
+    viewerUrl = 'https://docs.google.com/gview?embedded=true&url=' + encodeURIComponent(url);
   }
-
-  document.getElementById('pdfDownloadBtn').href = url;
-  document.getElementById('pdfOpenBtn').href = url;
-  document.getElementById('pdfModal').classList.add('active');
+  
+  iframe.onload = function() {
+    loading.style.display = 'none';
+    iframe.style.display = 'block';
+  };
+  
+  iframe.onerror = function() {
+    loading.innerHTML = '<i class="fas fa-exclamation-triangle" style="font-size:2rem;color:#e74c3c"></i><br>Error al cargar el PDF.<br><a href="' + url + '" target="_blank" style="color:#fff">Abrir directamente</a>';
+  };
+  
+  iframe.src = viewerUrl;
+  document.getElementById('pdfFullscreenModal').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
-function switchPdfViewer() {
-  const iframe = document.getElementById('pdfIframe');
-  if (iframe.src.includes('docs.google.com')) {
-    iframe.src = CURRENT_PDF_URL;
-    document.getElementById('pdfAltViewerBtn').innerHTML = '<i class="fas fa-sync"></i> Visor Google';
-  } else {
-    iframe.src = 'https://docs.google.com/gview?embedded=true&url=' + encodeURIComponent(CURRENT_PDF_URL);
-    document.getElementById('pdfAltViewerBtn').innerHTML = '<i class="fas fa-sync"></i> Visor directo';
-  }
-}
-
-function closePdfModal() {
-  document.getElementById('pdfIframe').src = '';
-  document.getElementById('pdfModal').classList.remove('active');
+function closePdfFullscreen() {
+  document.getElementById('pdfFullscreenIframe').src = '';
+  document.getElementById('pdfFullscreenModal').classList.remove('active');
   document.body.style.overflow = '';
 }
 
@@ -448,6 +604,359 @@ function closeSidebar() {
   document.getElementById('sidebar').classList.remove('active');
   document.getElementById('sidebarOverlay').classList.remove('active');
   document.body.style.overflow = '';
+}
+
+function updatePendingBadge() {
+  const badge = document.getElementById('pendingCountBadge');
+  const text = document.getElementById('pendingCountText');
+  if (pendingChanges.length > 0) {
+    badge.style.display = 'inline-flex';
+    text.textContent = pendingChanges.length;
+  } else {
+    badge.style.display = 'none';
+  }
+}
+
+function updateConnectionStatus(status) {
+  const el = document.getElementById('connectionStatus');
+  if (!el) return;
+  if (status === 'online') {
+    el.className = 'connection-status online';
+    el.innerHTML = '<i class="fas fa-check-circle"></i> GitHub conectado';
+  } else if (status === 'offline') {
+    el.className = 'connection-status offline';
+    el.innerHTML = '<i class="fas fa-times-circle"></i> Sin conexión';
+  } else {
+    el.className = 'connection-status checking';
+    el.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Verificando';
+  }
+}
+
+async function checkGitHubConnection() {
+  if (!CONFIG.token || !CONFIG.repo) {
+    updateConnectionStatus('offline');
+    return false;
+  }
+  updateConnectionStatus('checking');
+  try {
+    const res = await fetch('https://api.github.com/repos/' + CONFIG.repo, {
+      headers: { 'Authorization': 'token ' + CONFIG.token, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (res.ok) {
+      updateConnectionStatus('online');
+      return true;
+    } else {
+      updateConnectionStatus('offline');
+      return false;
+    }
+  } catch (e) {
+    updateConnectionStatus('offline');
+    return false;
+  }
+}
+
+function addPendingChange(type, section, data, index) {
+  pendingChanges.push({
+    id: changeIdCounter++,
+    type: type,
+    section: section,
+    data: data,
+    index: index !== undefined ? index : -1,
+    timestamp: new Date().toLocaleTimeString('es-ES')
+  });
+  updatePendingBadge();
+  savePendingToLocal();
+}
+
+function removePendingChange(id) {
+  pendingChanges = pendingChanges.filter(c => c.id !== id);
+  updatePendingBadge();
+  savePendingToLocal();
+  if (CURRENT_PAGE === 'admin_pending') renderPage(CURRENT_PAGE);
+  showToast('info', 'Cambio descartado', 'El cambio fue eliminado de la lista de pendientes.');
+}
+
+function clearAllPending() {
+  if (!confirm('¿Descartar todos los cambios pendientes? Esta acción no se puede deshacer.')) return;
+  pendingChanges = [];
+  updatePendingBadge();
+  savePendingToLocal();
+  renderPage(CURRENT_PAGE);
+  showToast('info', 'Cambios descartados', 'Todos los cambios pendientes fueron eliminados.');
+}
+
+function savePendingToLocal() {
+  try {
+    localStorage.setItem('pending_changes', JSON.stringify(pendingChanges));
+    localStorage.setItem('pending_counter', changeIdCounter);
+  } catch(e) {}
+}
+
+function loadPendingFromLocal() {
+  try {
+    const saved = localStorage.getItem('pending_changes');
+    if (saved) {
+      pendingChanges = JSON.parse(saved);
+      changeIdCounter = parseInt(localStorage.getItem('pending_counter') || '1');
+      updatePendingBadge();
+    }
+  } catch(e) {}
+}
+
+function loadHistory() {
+  try {
+    const saved = localStorage.getItem('publish_history');
+    if (saved) publishHistory = JSON.parse(saved);
+  } catch(e) {}
+}
+
+function saveHistory() {
+  try {
+    localStorage.setItem('publish_history', JSON.stringify(publishHistory.slice(0, 50)));
+  } catch(e) {}
+}
+
+function addToHistory(count, types, success, error) {
+  publishHistory.unshift({
+    date: new Date().toLocaleString('es-ES'),
+    count: count,
+    types: types,
+    success: success,
+    error: error || null
+  });
+  saveHistory();
+}
+
+function openHistory() {
+  const content = document.getElementById('historyContent');
+  if (publishHistory.length === 0) {
+    content.innerHTML = '<p style="text-align:center;color:var(--gray-600);padding:2rem"><i class="fas fa-history" style="font-size:2rem;display:block;margin-bottom:1rem;opacity:.3"></i>No hay publicaciones registradas aún.</p>';
+  } else {
+    let html = '';
+    publishHistory.forEach(h => {
+      const typeNames = [];
+      if (h.types.add) typeNames.push(h.types.add + ' agregado(s)');
+      if (h.types.edit) typeNames.push(h.types.edit + ' editado(s)');
+      if (h.types.delete) typeNames.push(h.types.delete + ' eliminado(s)');
+      if (h.types.update) typeNames.push(h.types.update + ' sección(es) actualizada(s)');
+      
+      html += '<div class="history-item">' +
+        '<div class="history-item-header">' +
+        '<span class="history-item-date"><i class="fas fa-calendar"></i> ' + h.date + '</span>' +
+        '<span class="history-item-status ' + (h.success ? 'success' : 'error') + '">' + (h.success ? '<i class="fas fa-check"></i> Exitoso' : '<i class="fas fa-times"></i> Error') + '</span>' +
+        '</div>' +
+        '<div class="history-item-details">' +
+        '<strong>' + h.count + ' cambio(s)</strong>: ' + (typeNames.join(', ') || 'N/A') +
+        (h.error ? '<br><span style="color:var(--danger)"><i class="fas fa-exclamation-triangle"></i> ' + esc(h.error) + '</span>' : '') +
+        '</div></div>';
+    });
+    content.innerHTML = html;
+  }
+  document.getElementById('historyModal').classList.add('active');
+}
+
+function closeHistory() {
+  document.getElementById('historyModal').classList.remove('active');
+}
+
+function clearHistory() {
+  if (!confirm('¿Limpiar todo el historial de publicaciones?')) return;
+  publishHistory = [];
+  saveHistory();
+  openHistory();
+  showToast('info', 'Historial limpiado', 'El historial de publicaciones fue eliminado.');
+}
+
+function getSectionName(section) {
+  const names = {
+    'recursos': 'Recurso PDF',
+    'videos': 'Video',
+    'eventos': 'Evento',
+    'libro_ano': 'Libro del Año',
+    'quienes_somos': 'Quiénes Somos',
+    'informacion': 'Información',
+    'categorias_recursos': 'Categoría'
+  };
+  return names[section] || section;
+}
+
+function getChangeDescription(change) {
+  if (change.type === 'add') {
+    return 'Agregar nuevo: ' + (change.data.titulo || change.data.nombre || getSectionName(change.section));
+  } else if (change.type === 'edit') {
+    return 'Editar: ' + (change.data.titulo || change.data.nombre || getSectionName(change.section));
+  } else if (change.type === 'delete') {
+    return 'Eliminar elemento de ' + getSectionName(change.section);
+  } else if (change.type === 'update_section') {
+    return 'Actualizar ' + getSectionName(change.section);
+  } else if (change.type === 'reorder') {
+    return 'Reordenar ' + getSectionName(change.section);
+  }
+  return 'Cambio en ' + getSectionName(change.section);
+}
+
+function getChangePreview(change) {
+  if (!change.data) return '';
+  let preview = '<div class="change-preview">';
+  
+  if (change.type === 'add' || change.type === 'edit') {
+    if (change.data.titulo) preview += '<strong>Título:</strong> ' + esc(change.data.titulo) + '<br>';
+    if (change.data.categoria) preview += '<strong>Categoría:</strong> ' + esc(change.data.categoria) + '<br>';
+    if (change.data.descripcion) preview += '<strong>Descripción:</strong> ' + esc(change.data.descripcion.substring(0, 100)) + (change.data.descripcion.length > 100 ? '...' : '') + '<br>';
+    if (change.data.fecha) preview += '<strong>Fecha:</strong> ' + esc(change.data.fecha) + '<br>';
+    if (change.data.url) preview += '<strong>URL:</strong> ' + esc(change.data.url.substring(0, 50)) + (change.data.url.length > 50 ? '...' : '') + '<br>';
+    if (change.data.lugar) preview += '<strong>Lugar:</strong> ' + esc(change.data.lugar) + '<br>';
+    if (change.data.hora) preview += '<strong>Hora:</strong> ' + esc(change.data.hora) + '<br>';
+    if (change.data.autor) preview += '<strong>Autor:</strong> ' + esc(change.data.autor) + '<br>';
+  } else if (change.type === 'update_section') {
+    preview += '<strong>Sección completa será actualizada</strong><br>';
+    if (change.data.titulo) preview += '<strong>Título:</strong> ' + esc(change.data.titulo) + '<br>';
+    if (change.data.direccion) preview += '<strong>Dirección:</strong> ' + esc(change.data.direccion) + '<br>';
+    if (change.data.telefono) preview += '<strong>Teléfono:</strong> ' + esc(change.data.telefono) + '<br>';
+  } else if (change.type === 'add' && change.data.nombre) {
+    preview += '<strong>Nueva categoría:</strong> ' + esc(change.data.nombre);
+  }
+  
+  preview += '</div>';
+  return preview;
+}
+
+function renderPendingBar() {
+  if (!ADMIN_MODE || pendingChanges.length === 0) return '';
+  return '<div class="pending-bar">' +
+    '<div class="pending-bar-text"><i class="fas fa-exclamation-circle"></i> Tienes ' + pendingChanges.length + ' cambio(s) sin publicar</div>' +
+    '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+    '<button class="btn btn-sm" onclick="navigate(\'admin_pending\')"><i class="fas fa-eye"></i> Revisar Cambios</button>' +
+    '<button class="btn btn-success btn-sm" onclick="openConfirmPublish()"><i class="fas fa-cloud-upload-alt"></i> Publicar Todo Ahora</button>' +
+    '</div></div>';
+}
+
+function openConfirmPublish() {
+  if (pendingChanges.length === 0) {
+    showToast('warning', 'Sin cambios', 'No hay cambios pendientes para publicar.');
+    return;
+  }
+  
+  document.getElementById('confirmCount').textContent = pendingChanges.length;
+  
+  let summary = '';
+  pendingChanges.forEach(change => {
+    const icon = change.type === 'add' ? 'plus-circle' : (change.type === 'delete' ? 'trash' : 'edit');
+    const typeClass = change.type === 'add' ? 'add' : (change.type === 'delete' ? 'delete' : 'edit');
+    summary += '<div class="confirm-summary-item ' + typeClass + '">' +
+      '<i class="fas fa-' + icon + '"></i> ' +
+      esc(getChangeDescription(change)) +
+      '</div>';
+  });
+  
+  document.getElementById('confirmSummary').innerHTML = summary;
+  document.getElementById('confirmCheck').checked = false;
+  document.getElementById('btnConfirmPublish').disabled = true;
+  document.getElementById('confirmPublishModal').classList.add('active');
+}
+
+function closeConfirmPublish() {
+  document.getElementById('confirmPublishModal').classList.remove('active');
+}
+
+document.getElementById('confirmCheck').addEventListener('change', function() {
+  document.getElementById('btnConfirmPublish').disabled = !this.checked;
+});
+
+async function executePublish() {
+  closeConfirmPublish();
+  
+  const count = pendingChanges.length;
+  const types = { add: 0, edit: 0, delete: 0, update: 0, reorder: 0 };
+  
+  pendingChanges.forEach(c => {
+    if (c.type === 'add') types.add++;
+    else if (c.type === 'edit') types.edit++;
+    else if (c.type === 'delete') types.delete++;
+    else if (c.type === 'update_section') types.update++;
+    else if (c.type === 'reorder') types.reorder++;
+  });
+  
+  showToast('info', 'Publicando...', 'Enviando ' + count + ' cambio(s) a GitHub. Por favor espera.', 10000);
+  
+  const sortedChanges = [...pendingChanges].sort((a, b) => {
+    const order = {add: 0, update_section: 1, edit: 2, reorder: 3, delete: 4};
+    return (order[a.type] || 0) - (order[b.type] || 0);
+  });
+  
+  const deleteIndices = {};
+  
+  for (const change of sortedChanges) {
+    const section = change.section;
+    
+    if (!DATA[section]) DATA[section] = [];
+    
+    if (change.type === 'add') {
+      if (section === 'categorias_recursos') {
+        if (change.data.nombre && !DATA.categorias_recursos.includes(change.data.nombre)) {
+          DATA.categorias_recursos.push(change.data.nombre);
+        }
+      } else {
+        DATA[section].unshift(change.data);
+      }
+    } else if (change.type === 'edit') {
+      if (change.index >= 0 && change.index < DATA[section].length) {
+        DATA[section][change.index] = change.data;
+      }
+    } else if (change.type === 'delete') {
+      if (change.index >= 0 && change.index < DATA[section].length) {
+        if (!deleteIndices[section]) deleteIndices[section] = [];
+        deleteIndices[section].push(change.index);
+      }
+    } else if (change.type === 'update_section') {
+      DATA[section] = change.data;
+    } else if (change.type === 'reorder') {
+      // El reorder ya se aplicó directamente en DATA cuando se hizo
+    }
+  }
+  
+  for (const section in deleteIndices) {
+    const indices = deleteIndices[section].sort((a, b) => b - a);
+    for (const idx of indices) {
+      if (idx >= 0 && idx < DATA[section].length) {
+        DATA[section].splice(idx, 1);
+      }
+    }
+  }
+  
+  try {
+    await saveDataToGitHub();
+    cacheData();
+    pendingChanges = [];
+    changeIdCounter = 1;
+    savePendingToLocal();
+    updatePendingBadge();
+    
+    addToHistory(count, types, true, null);
+    
+    showToast('success', '¡Publicado correctamente!', count + ' cambio(s) enviados a GitHub. La página se actualizará en 1-2 minutos.', 8000);
+    renderPage(CURRENT_PAGE);
+  } catch (err) {
+    addToHistory(count, types, false, err.message);
+    showToast('error', 'Error al publicar', err.message, 8000);
+  }
+}
+
+function moveItem(section, index, direction) {
+  const arr = DATA[section];
+  if (!arr || index < 0 || index >= arr.length) return;
+  
+  const newIndex = index + direction;
+  if (newIndex < 0 || newIndex >= arr.length) return;
+  
+  [arr[index], arr[newIndex]] = [arr[newIndex], arr[index]];
+  
+  pendingChanges = pendingChanges.filter(c => !(c.type === 'reorder' && c.section === section));
+  addPendingChange('reorder', section, null, -1);
+  
+  cacheData();
+  renderPage(CURRENT_PAGE);
+  showToast('info', 'Elemento movido', 'El cambio de orden se agregará a la próxima publicación.');
 }
 
 function renderPage(page) {
@@ -474,8 +983,10 @@ function renderPage(page) {
 
   if (ADMIN_MODE) {
     const adminAct = page.startsWith('admin') ? 'active' : '';
-    navDesktop += '<li><a onclick="navigate(\'admin_dashboard\');return false;" class="' + adminAct + '" style="color:var(--orange)"><i class="fas fa-cog"></i> Admin</a></li>';
-    navSidebar += '<li><a onclick="navigate(\'admin_dashboard\');return false;" style="color:var(--orange)"><i class="fas fa-cog"></i> Admin Panel</a></li>';
+    const pendingCount = pendingChanges.length;
+    const pendingBadge = pendingCount > 0 ? '<span class="pending-badge">' + pendingCount + '</span>' : '';
+    navDesktop += '<li><a onclick="navigate(\'admin_dashboard\');return false;" class="' + adminAct + '" style="color:var(--orange)"><i class="fas fa-cog"></i> Admin' + pendingBadge + '</a></li>';
+    navSidebar += '<li><a onclick="navigate(\'admin_dashboard\');return false;" style="color:var(--orange)"><i class="fas fa-cog"></i> Admin Panel' + pendingBadge + '</a></li>';
   }
 
   document.getElementById('nav-links').innerHTML = navDesktop;
@@ -495,6 +1006,7 @@ function renderPage(page) {
   document.getElementById('foot-email').innerHTML = '<i class="fas fa-envelope"></i> ' + esc(info.email || '');
   document.getElementById('current-year').textContent = new Date().getFullYear();
   document.getElementById('adminStatusBar').classList.toggle('active', ADMIN_MODE);
+  updatePendingBadge();
 
   const content = document.getElementById('main-content');
   const renderers = {
@@ -512,7 +1024,8 @@ function renderPage(page) {
     admin_libro_ano: renderAdminLibro,
     admin_quienes_somos: renderAdminQuienes,
     admin_info: renderAdminInfo,
-    admin_categorias: renderAdminCategorias
+    admin_categorias: renderAdminCategorias,
+    admin_pending: renderAdminPending
   };
 
   if (page.startsWith('admin') && !ADMIN_MODE) {
@@ -581,7 +1094,6 @@ function renderRecursos() {
     if (recs.length) {
       items += '<div class="card"><h3>' + esc(cat) + '</h3><div class="grid">';
       recs.forEach(r => {
-        const globalIndex = (DATA.recursos || []).indexOf(r);
         const isUploaded = isGithubRawUrl(r.url);
         items += '<div class="resource-item" data-search="' + esc((r.titulo || '').toLowerCase() + ' ' + (r.descripcion || '').toLowerCase()) + '">' +
           '<h4>' + esc(r.titulo) + '</h4>' +
@@ -590,10 +1102,9 @@ function renderRecursos() {
           '<div class="resource-meta"><span><i class="fas fa-calendar"></i> ' + esc(r.fecha) + '</span></div>' +
           '<p>' + esc(r.descripcion) + '</p>' +
           '<div class="btn-group-inline">' +
-          '<button class="btn btn-sm" onclick="openPdfModal(\'' + esc(r.titulo).replace(/'/g, "\\'") + '\',\'' + esc(r.url) + '\')"><i class="fas fa-book-open"></i> Leer PDF</button>' +
+          '<button class="btn btn-sm" onclick="openPdfFullscreen(\'' + esc(r.titulo).replace(/'/g, "\\'") + '\',\'' + esc(r.url) + '\')"><i class="fas fa-book-open"></i> Leer PDF</button>' +
           '<a href="' + esc(r.url) + '" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-download"></i> Descargar</a>' +
           '</div>' +
-          (ADMIN_MODE ? '<button class="btn btn-danger btn-sm" style="margin-top:10px" onclick="deleteRecurso(' + globalIndex + ')"><i class="fas fa-trash"></i> Eliminar</button>' : '') +
           '</div>';
       });
       items += '</div></div>';
@@ -624,7 +1135,6 @@ function renderVideos() {
         const vidId = getYoutubeId(v.url);
         const embedUrl = vidId ? 'https://www.youtube.com/embed/' + vidId : v.url;
         const watchUrl = vidId ? 'https://www.youtube.com/watch?v=' + vidId : v.url;
-        const globalIndex = (DATA.videos || []).indexOf(v);
         items += '<div class="resource-item">' +
           '<h4>' + esc(v.titulo) + '</h4>' +
           '<span class="badge">' + esc(v.categoria) + '</span>' +
@@ -634,7 +1144,6 @@ function renderVideos() {
           '<div class="btn-group-inline">' +
           '<a href="' + esc(watchUrl) + '" target="_blank" class="btn btn-sm"><i class="fab fa-youtube"></i> Ver en YouTube</a>' +
           '</div>' +
-          (ADMIN_MODE ? '<button class="btn btn-danger btn-sm" style="margin-top:10px" onclick="deleteVideo(' + globalIndex + ')"><i class="fas fa-trash"></i> Eliminar</button>' : '') +
           '</div>';
       });
       items += '</div>';
@@ -657,7 +1166,7 @@ function renderLibroAno() {
     (isUploaded ? ' <span class="badge" style="background:var(--orange)"><i class="fas fa-cloud"></i> Alojado en GitHub</span>' : '') + '</p>' +
     '<p style="line-height:1.8;margin:1.5rem 0">' + nl2br(lb.descripcion) + '</p>' +
     '<div style="display:flex;gap:1rem;flex-wrap:wrap">' +
-    (lb.url ? '<button class="btn btn-lg" onclick="openPdfModal(\'' + esc(lb.titulo).replace(/'/g, "\\'") + '\',\'' + esc(lb.url) + '\')"><i class="fas fa-book-open"></i> Leer Libro</button>' +
+    (lb.url ? '<button class="btn btn-lg" onclick="openPdfFullscreen(\'' + esc(lb.titulo).replace(/'/g, "\\'") + '\',\'' + esc(lb.url) + '\')"><i class="fas fa-book-open"></i> Leer Libro</button>' +
     '<a href="' + esc(lb.url) + '" target="_blank" class="btn btn-outline btn-lg"><i class="fas fa-download"></i> Descargar</a>' : '') +
     (lb.cuestionario_url ? '<a href="' + esc(lb.cuestionario_url) + '" target="_blank" class="btn btn-black btn-lg"><i class="fas fa-clipboard-list"></i> Hacer Cuestionario</a>' : '') +
     '</div>';
@@ -670,7 +1179,6 @@ function renderLibroAno() {
 function renderEventos() {
   let items = '';
   (DATA.eventos || []).forEach(e => {
-    const globalIndex = (DATA.eventos || []).indexOf(e);
     items += '<div class="card"><h3>' + esc(e.titulo) + '</h3>' +
     '<div class="resource-meta">' +
     '<span><i class="fas fa-calendar"></i> ' + esc(e.fecha) + '</span>' +
@@ -680,7 +1188,6 @@ function renderEventos() {
     '<p style="margin-top:1rem">' + nl2br(e.descripcion) + '</p>' +
     '<div class="btn-group-inline">' +
     (e.url ? '<a href="' + esc(e.url) + '" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Más Información</a>' : '') +
-    (ADMIN_MODE ? '<button class="btn btn-danger btn-sm" onclick="deleteEvento(' + globalIndex + ')"><i class="fas fa-trash"></i> Eliminar</button>' : '') +
     '</div></div>';
   });
 
@@ -710,6 +1217,7 @@ function renderContacto() {
 function renderAdminDashboard() {
   const navLinks = [
     ['admin_dashboard','Dashboard','tachometer-alt'],
+    ['admin_pending','Revisar Cambios','clipboard-list'],
     ['admin_quienes_somos','Quiénes Somos','users'],
     ['admin_recursos','Recursos','file-pdf'],
     ['admin_videos','Videos','video'],
@@ -720,7 +1228,8 @@ function renderAdminDashboard() {
   ];
   let nav = '<div class="admin-nav">';
   navLinks.forEach(([r,t,i]) => {
-    nav += '<a onclick="navigate(\'' + r + '\');return false;" class="' + (r === CURRENT_PAGE ? 'active' : '') + '"><i class="fas fa-' + i + '"></i> ' + t + '</a>';
+    const pendingBadge = r === 'admin_pending' && pendingChanges.length > 0 ? '<span class="pending-badge">' + pendingChanges.length + '</span>' : '';
+    nav += '<a onclick="navigate(\'' + r + '\');return false;" class="' + (r === CURRENT_PAGE ? 'active' : '') + '"><i class="fas fa-' + i + '"></i> ' + t + pendingBadge + '</a>';
   });
   nav += '</div>';
 
@@ -737,21 +1246,63 @@ function renderAdminDashboard() {
 
   return '<div class="card"><h2><i class="fas fa-shield-alt" style="color:var(--orange)"></i> Panel de Administración</h2>' +
   '<p style="color:var(--gray-600)">Repositorio: <strong>' + esc(CONFIG.repo) + '</strong></p></div>' + nav +
+  renderPendingBar() +
   '<div class="grid g4">' + s + '</div>' +
   '<div class="card"><h3>Acciones Rápidas</h3><div class="btn-group-inline" style="margin-top:1rem">' +
   '<button class="btn btn-sm" onclick="navigate(\'admin_recursos\')"><i class="fas fa-plus"></i> Agregar Recurso</button>' +
   '<button class="btn btn-sm" onclick="navigate(\'admin_videos\')"><i class="fas fa-plus"></i> Agregar Video</button>' +
   '<button class="btn btn-sm" onclick="navigate(\'admin_eventos\')"><i class="fas fa-plus"></i> Agregar Evento</button>' +
   '<button class="btn btn-black btn-sm" onclick="forceReloadData()"><i class="fas fa-sync"></i> Recargar Datos</button>' +
+  '<button class="btn btn-info btn-sm" onclick="openHistory()"><i class="fas fa-history"></i> Historial</button>' +
   '</div></div>' +
-  '<div class="card" style="border-left:4px solid var(--orange)"><h3><i class="fas fa-cloud-upload-alt" style="color:var(--orange)"></i> Subida de PDFs</h3>' +
-  '<p style="margin-top:.5rem;line-height:1.8">Puedes <strong>subir archivos PDF directamente</strong> desde tu dispositivo. Los archivos se guardan en la carpeta <code>/pdfs/</code> de tu repositorio de GitHub y se pueden leer directamente en la página.</p>' +
-  '<ul style="margin-top:.5rem;margin-left:1.5rem;line-height:2">' +
-  '<li>Tamaño máximo por archivo: <strong>50 MB</strong></li>' +
-  '<li>Solo se permiten archivos <strong>.pdf</strong></li>' +
-  '<li>Los PDFs subidos se abren en el visor integrado de la página</li>' +
-  '<li>También puedes usar URLs externas (Google Drive, Dropbox, etc.)</li>' +
-  '</ul></div>';
+  '<div class="card" style="border-left:4px solid var(--orange)"><h3><i class="fas fa-info-circle" style="color:var(--orange)"></i> Cómo funciona el sistema de cambios</h3>' +
+  '<p style="margin-top:.5rem;line-height:1.8">Los cambios <strong>no se publican inmediatamente</strong>. En su lugar:</p>' +
+  '<ol style="margin-top:.5rem;margin-left:1.5rem;line-height:2">' +
+  '<li>Agrega, edita, elimina o reordena todo lo que necesites</li>' +
+  '<li>Los cambios se acumulan en la lista de <strong>"Revisar Cambios"</strong></li>' +
+  '<li>Cuando termines, ve a <strong>"Revisar Cambios"</strong></li>' +
+  '<li>Revisa la vista previa de cada cambio</li>' +
+  '<li>Pulsa <strong>"Publicar Todo Ahora"</strong></li>' +
+  '<li>Confirma en el modal de confirmación</li>' +
+  '<li>Todos los cambios se publican en GitHub de una sola vez</li>' +
+  '</ol>' +
+  '<p style="margin-top:.5rem;color:var(--gray-600);font-size:.9rem"><i class="fas fa-lightbulb" style="color:var(--orange)"></i> Puedes ver el historial de publicaciones anteriores pulsando el botón "Historial" arriba.</p></div>';
+}
+
+function renderAdminPending() {
+  let items = '';
+  pendingChanges.forEach(change => {
+    const typeClass = change.type === 'add' ? 'add' : (change.type === 'delete' ? 'delete' : 'edit');
+    const typeIcon = change.type === 'add' ? 'plus' : (change.type === 'delete' ? 'trash' : 'edit');
+    const typeName = change.type === 'add' ? 'Agregar' : (change.type === 'delete' ? 'Eliminar' : (change.type === 'reorder' ? 'Reordenar' : 'Editar'));
+    
+    items += '<div class="change-item ' + typeClass + '">' +
+      '<div class="change-icon ' + typeClass + '"><i class="fas fa-' + typeIcon + '"></i></div>' +
+      '<div class="change-info">' +
+      '<h4>' + typeName + ' ' + getSectionName(change.section) + '</h4>' +
+      '<p>' + esc(getChangeDescription(change)) + '</p>' +
+      '<p style="font-size:.75rem;color:var(--gray-600)"><i class="fas fa-clock"></i> ' + change.timestamp + '</p>' +
+      getChangePreview(change) +
+      '</div>' +
+      '<button class="btn btn-danger btn-sm" onclick="removePendingChange(' + change.id + ')"><i class="fas fa-times"></i> Descartar</button>' +
+      '</div>';
+  });
+
+  return '<div class="card"><h2><i class="fas fa-clipboard-list" style="color:var(--orange)"></i> Revisar Cambios Pendientes</h2></div>' +
+  '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Revisar Cambios</a></div>' +
+  (pendingChanges.length > 0 ?
+    '<div class="card" style="border-left:4px solid var(--warning)">' +
+    '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px">' +
+    '<div><h3 style="margin:0"><i class="fas fa-exclamation-circle" style="color:var(--warning)"></i> ' + pendingChanges.length + ' cambio(s) listo(s) para publicar</h3>' +
+    '<p style="color:var(--gray-600);margin-top:5px">Revisa la vista previa de cada cambio y publica todo de una vez.</p></div>' +
+    '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+    '<button class="btn btn-success" onclick="openConfirmPublish()"><i class="fas fa-cloud-upload-alt"></i> Publicar Todo Ahora</button>' +
+    '<button class="btn btn-danger btn-sm" onclick="clearAllPending()"><i class="fas fa-trash"></i> Descartar Todos</button>' +
+    '</div></div></div>' +
+    '<div class="card"><h3>Lista de cambios con vista previa</h3>' + items + '</div>'
+    :
+    '<div class="card"><p style="text-align:center;color:var(--gray-600);padding:3rem"><i class="fas fa-check-circle" style="font-size:3rem;display:block;margin-bottom:1rem;color:var(--success);opacity:.5"></i>No hay cambios pendientes.<br><br>Los cambios que hagas aparecerán aquí antes de publicarse.</p></div>'
+  );
 }
 
 function renderAdminRecursos() {
@@ -759,14 +1310,27 @@ function renderAdminRecursos() {
   let rows = '';
   (DATA.recursos || []).forEach((r, i) => {
     const isUp = isGithubRawUrl(r.url);
+    const canUp = i > 0;
+    const canDown = i < (DATA.recursos || []).length - 1;
     rows += '<tr><td>' + esc(r.titulo) + (isUp ? ' <i class="fas fa-cloud" style="color:var(--orange)" title="Alojado en GitHub"></i>' : '') + '</td><td><span class="badge">' + esc(r.categoria) + '</span></td><td>' + esc(r.fecha) + '</td>' +
-    '<td><a href="' + esc(r.url) + '" target="_blank" class="btn btn-outline btn-sm" style="margin-right:5px"><i class="fas fa-eye"></i></a><button class="btn btn-danger btn-sm" onclick="deleteRecurso(' + i + ')"><i class="fas fa-trash"></i></button></td></tr>';
+    '<td>' +
+    '<div class="reorder-btns">' +
+    '<button class="reorder-btn" onclick="moveItem(\'recursos\',' + i + ',-1)" ' + (canUp ? '' : 'disabled') + '><i class="fas fa-chevron-up"></i></button>' +
+    '<button class="reorder-btn" onclick="moveItem(\'recursos\',' + i + ',1)" ' + (canDown ? '' : 'disabled') + '><i class="fas fa-chevron-down"></i></button>' +
+    '</div>' +
+    '</td>' +
+    '<td>' +
+    '<button class="btn btn-info btn-xs" style="margin-right:5px" onclick="editRecurso(' + i + ')"><i class="fas fa-edit"></i></button>' +
+    '<button class="btn btn-danger btn-xs" onclick="deleteRecurso(' + i + ')"><i class="fas fa-trash"></i></button>' +
+    '</td></tr>';
   });
 
   return '<div class="card"><h2><i class="fas fa-file-pdf" style="color:var(--orange)"></i> Gestionar Recursos PDF</h2></div>' +
   '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Recursos</a></div>' +
-  '<div class="card"><h3><i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Recurso</h3>' +
-  '<form id="formRecurso" onsubmit="addRecurso(event)">' +
+  renderPendingBar() +
+  '<div class="card"><h3 id="formRecursoTitle"><i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Recurso</h3>' +
+  '<form id="formRecurso" onsubmit="submitRecurso(event)">' +
+  '<input type="hidden" id="r_edit_index" value="-1">' +
   '<div class="form-group"><label>Título del recurso</label><input type="text" id="r_titulo" placeholder="Ej: El Camino a Cristo - Libro Completo" required></div>' +
   '<div class="form-group"><label>Descripción</label><textarea id="r_desc" placeholder="Describe brevemente el contenido del recurso..." required></textarea></div>' +
   '<div class="form-group"><label>Categoría</label><select id="r_cat" required>' + opts + '</select></div>' +
@@ -794,11 +1358,15 @@ function renderAdminRecursos() {
   '<p style="font-size:.8rem;color:var(--gray-600);margin-top:5px">Pega la URL de un PDF alojado en otro servicio (Google Drive, Dropbox, etc.)</p>' +
   '</div>' +
   '</div>' +
-  '<button type="submit" class="btn btn-lg" id="btnSubmitR" style="width:100%;justify-content:center"><i class="fas fa-cloud-upload-alt"></i> Agregar y Publicar</button>' +
+  '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+  '<button type="submit" class="btn btn-lg" id="btnSubmitR"><i class="fas fa-plus"></i> Agregar a Cambios Pendientes</button>' +
+  '<button type="button" class="btn btn-black btn-lg" id="btnCancelEditR" style="display:none" onclick="cancelEditRecurso()"><i class="fas fa-times"></i> Cancelar Edición</button>' +
+  '</div>' +
   '</form></div>' +
   '<div class="card"><h3>Recursos existentes (' + (DATA.recursos || []).length + ')</h3>' +
-  '<div class="table-responsive"><table><thead><tr><th>Título</th><th>Categoría</th><th>Fecha</th><th>Acciones</th></tr></thead>' +
-  '<tbody>' + (rows || '<tr><td colspan="4" style="text-align:center;color:var(--gray-600)">No hay recursos registrados</td></tr>') + '</tbody></table></div></div>';
+  '<p style="font-size:.85rem;color:var(--gray-600);margin-bottom:10px"><i class="fas fa-info-circle"></i> Usa las flechas ↑↓ para reordenar. Los cambios de orden se publican junto con los demás.</p>' +
+  '<div class="table-responsive"><table><thead><tr><th>Título</th><th>Categoría</th><th>Fecha</th><th>Orden</th><th>Acciones</th></tr></thead>' +
+  '<tbody>' + (rows || '<tr><td colspan="5" style="text-align:center;color:var(--gray-600)">No hay recursos registrados</td></tr>') + '</tbody></table></div></div>';
 }
 
 function togglePdfMode(mode) {
@@ -938,79 +1506,116 @@ async function uploadFileToGitHub(file, folder, progressFillId, progressTextId) 
   });
 }
 
-async function addRecurso(e) {
+async function submitRecurso(e) {
   e.preventDefault();
   const tipo = document.querySelector('input[name="r_tipo"]:checked').value;
   const btn = document.getElementById('btnSubmitR');
-  const originalHtml = btn.innerHTML;
+  const editIndex = parseInt(document.getElementById('r_edit_index').value);
   let pdfUrl = '';
 
   try {
     if (tipo === 'upload') {
       const fileInput = document.getElementById('r_file');
-      if (!fileInput.files.length) {
-        alert('⚠️ Selecciona un archivo PDF para subir.');
+      if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const validationError = validateFile(file);
+        if (validationError) {
+          showToast('error', 'Error de archivo', validationError);
+          return;
+        }
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subiendo archivo...';
+        document.getElementById('progressR').style.display = 'block';
+        pdfUrl = await uploadFileToGitHub(file, 'pdfs', 'progressFillR', 'progressTextR');
+      } else if (editIndex >= 0 && DATA.recursos[editIndex]) {
+        pdfUrl = DATA.recursos[editIndex].url;
+      } else {
+        showToast('warning', 'Archivo requerido', 'Selecciona un archivo PDF o cambia a URL externa.');
         return;
       }
-      const file = fileInput.files[0];
-      const validationError = validateFile(file);
-      if (validationError) {
-        alert('❌ ' + validationError);
-        return;
-      }
-
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subiendo archivo...';
-      document.getElementById('progressR').style.display = 'block';
-
-      pdfUrl = await uploadFileToGitHub(file, 'pdfs', 'progressFillR', 'progressTextR');
-
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando datos...';
     } else {
       pdfUrl = document.getElementById('r_url').value.trim();
       if (!pdfUrl) {
-        alert('⚠️ Ingresa la URL del PDF.');
+        showToast('warning', 'URL requerida', 'Ingresa la URL del PDF.');
         return;
       }
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
     }
 
-    if (!DATA.recursos) DATA.recursos = [];
-    DATA.recursos.unshift({
+    const recursoData = {
       titulo: document.getElementById('r_titulo').value.trim(),
       descripcion: document.getElementById('r_desc').value.trim(),
       categoria: document.getElementById('r_cat').value,
       url: pdfUrl,
-      fecha: new Date().toLocaleDateString('es-ES', {year:'numeric',month:'long',day:'numeric'})
-    });
+      fecha: editIndex >= 0 && DATA.recursos[editIndex] ? DATA.recursos[editIndex].fecha : new Date().toLocaleDateString('es-ES', {year:'numeric',month:'long',day:'numeric'})
+    };
 
-    await saveDataToGitHub();
-    cacheData();
+    if (editIndex >= 0) {
+      addPendingChange('edit', 'recursos', recursoData, editIndex);
+      showToast('success', 'Recurso editado', 'Los cambios se agregaron a la lista de pendientes.');
+    } else {
+      addPendingChange('add', 'recursos', recursoData);
+      showToast('success', 'Recurso agregado', 'El recurso se agregó a la lista de pendientes.');
+    }
 
-    btn.innerHTML = '<i class="fas fa-check"></i> ¡Publicado correctamente!';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-
-    setTimeout(() => {
-      renderPage(CURRENT_PAGE);
-    }, 1500);
+    cancelEditRecurso();
+    renderPage(CURRENT_PAGE);
 
   } catch (err) {
-    alert('❌ Error: ' + err.message);
-    btn.innerHTML = originalHtml;
+    showToast('error', 'Error', err.message);
     btn.disabled = false;
-    btn.style.background = '';
-    btn.style.borderColor = '';
+    btn.innerHTML = '<i class="fas fa-plus"></i> Agregar a Cambios Pendientes';
     document.getElementById('progressR').style.display = 'none';
   }
 }
 
-async function deleteRecurso(i) {
-  if (!confirm('¿Estás seguro de eliminar este recurso?\n\nNota: Si el PDF fue subido a GitHub, el archivo permanecerá en el repositorio pero ya no se mostrará en la página.')) return;
-  DATA.recursos.splice(i, 1);
-  await saveDataToGitHub();
-  cacheData();
+function editRecurso(index) {
+  const r = DATA.recursos[index];
+  if (!r) return;
+  
+  document.getElementById('r_edit_index').value = index;
+  document.getElementById('r_titulo').value = r.titulo;
+  document.getElementById('r_desc').value = r.descripcion;
+  document.getElementById('r_cat').value = r.categoria;
+  document.getElementById('r_url').value = r.url;
+  
+  document.getElementById('formRecursoTitle').innerHTML = '<i class="fas fa-edit" style="color:var(--orange)"></i> Editando: ' + esc(r.titulo);
+  document.getElementById('btnSubmitR').innerHTML = '<i class="fas fa-save"></i> Guardar Cambios';
+  document.getElementById('btnCancelEditR').style.display = 'inline-flex';
+  
+  if (isGithubRawUrl(r.url)) {
+    togglePdfMode('upload');
+    document.querySelector('input[name="r_tipo"][value="upload"]').checked = true;
+  } else {
+    togglePdfMode('url');
+    document.querySelector('input[name="r_tipo"][value="url"]').checked = true;
+  }
+  
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function cancelEditRecurso() {
+  document.getElementById('r_edit_index').value = -1;
+  document.getElementById('r_titulo').value = '';
+  document.getElementById('r_desc').value = '';
+  document.getElementById('r_cat').value = (DATA.categorias_recursos || [])[0] || '';
+  document.getElementById('r_url').value = '';
+  document.getElementById('r_file').value = '';
+  document.getElementById('fileInfoR').innerHTML = '';
+  document.getElementById('formRecursoTitle').innerHTML = '<i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Recurso';
+  document.getElementById('btnSubmitR').innerHTML = '<i class="fas fa-plus"></i> Agregar a Cambios Pendientes';
+  document.getElementById('btnSubmitR').disabled = false;
+  document.getElementById('btnCancelEditR').style.display = 'none';
+  document.getElementById('progressR').style.display = 'none';
+  togglePdfMode('upload');
+  document.querySelector('input[name="r_tipo"][value="upload"]').checked = true;
+}
+
+function deleteRecurso(index) {
+  const r = DATA.recursos[index];
+  if (!r) return;
+  if (!confirm('¿Eliminar el recurso "' + r.titulo + '"?\n\nEl cambio se agregará a la lista de pendientes.')) return;
+  addPendingChange('delete', 'recursos', null, index);
+  showToast('success', 'Recurso marcado para eliminar', 'Ve a "Revisar Cambios" para publicar.');
   renderPage(CURRENT_PAGE);
 }
 
@@ -1018,120 +1623,206 @@ function renderAdminVideos() {
   const opts = (DATA.categorias_recursos || []).map(c => '<option value="' + esc(c) + '">' + esc(c) + '</option>').join('');
   let rows = '';
   (DATA.videos || []).forEach((v, i) => {
+    const canUp = i > 0;
+    const canDown = i < (DATA.videos || []).length - 1;
     rows += '<tr><td>' + esc(v.titulo) + '</td><td><span class="badge">' + esc(v.categoria) + '</span></td><td>' + esc(v.fecha) + '</td>' +
-    '<td><button class="btn btn-danger btn-sm" onclick="deleteVideo(' + i + ')"><i class="fas fa-trash"></i> Eliminar</button></td></tr>';
+    '<td>' +
+    '<div class="reorder-btns">' +
+    '<button class="reorder-btn" onclick="moveItem(\'videos\',' + i + ',-1)" ' + (canUp ? '' : 'disabled') + '><i class="fas fa-chevron-up"></i></button>' +
+    '<button class="reorder-btn" onclick="moveItem(\'videos\',' + i + ',1)" ' + (canDown ? '' : 'disabled') + '><i class="fas fa-chevron-down"></i></button>' +
+    '</div>' +
+    '</td>' +
+    '<td>' +
+    '<button class="btn btn-info btn-xs" style="margin-right:5px" onclick="editVideo(' + i + ')"><i class="fas fa-edit"></i></button>' +
+    '<button class="btn btn-danger btn-xs" onclick="deleteVideo(' + i + ')"><i class="fas fa-trash"></i></button>' +
+    '</td></tr>';
   });
   return '<div class="card"><h2><i class="fas fa-video" style="color:var(--orange)"></i> Gestionar Videos</h2></div>' +
   '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Videos</a></div>' +
-  '<div class="card"><h3><i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Video</h3>' +
+  renderPendingBar() +
+  '<div class="card"><h3 id="formVideoTitle"><i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Video</h3>' +
   '<div class="alert alert-info"><i class="fas fa-info-circle"></i> Pega la URL de YouTube. Formatos aceptados: youtube.com/watch?v=..., youtu.be/..., youtube.com/embed/..., youtube.com/shorts/...</div>' +
-  '<form onsubmit="addVideo(event)">' +
+  '<form onsubmit="submitVideo(event)">' +
+  '<input type="hidden" id="v_edit_index" value="-1">' +
   '<div class="form-group"><label>Título del video</label><input type="text" id="v_titulo" placeholder="Ej: Sermón - El Poder de la Oración" required></div>' +
   '<div class="form-group"><label>Descripción</label><textarea id="v_desc" placeholder="Describe el contenido del video..." required></textarea></div>' +
   '<div class="form-group"><label>Categoría</label><select id="v_cat" required>' + opts + '</select></div>' +
   '<div class="form-group"><label>URL del video (YouTube)</label><input type="url" id="v_url" placeholder="https://www.youtube.com/watch?v=..." required></div>' +
-  '<button type="submit" class="btn" id="btnSubmitV"><i class="fas fa-cloud-upload-alt"></i> Agregar y Publicar</button>' +
+  '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+  '<button type="submit" class="btn" id="btnSubmitV"><i class="fas fa-plus"></i> Agregar a Cambios Pendientes</button>' +
+  '<button type="button" class="btn btn-black" id="btnCancelEditV" style="display:none" onclick="cancelEditVideo()"><i class="fas fa-times"></i> Cancelar Edición</button>' +
+  '</div>' +
   '</form></div>' +
   '<div class="card"><h3>Videos existentes (' + (DATA.videos || []).length + ')</h3>' +
-  '<div class="table-responsive"><table><thead><tr><th>Título</th><th>Categoría</th><th>Fecha</th><th>Acciones</th></tr></thead>' +
-  '<tbody>' + (rows || '<tr><td colspan="4" style="text-align:center;color:var(--gray-600)">No hay videos registrados</td></tr>') + '</tbody></table></div></div>';
+  '<p style="font-size:.85rem;color:var(--gray-600);margin-bottom:10px"><i class="fas fa-info-circle"></i> Usa las flechas ↑↓ para reordenar.</p>' +
+  '<div class="table-responsive"><table><thead><tr><th>Título</th><th>Categoría</th><th>Fecha</th><th>Orden</th><th>Acciones</th></tr></thead>' +
+  '<tbody>' + (rows || '<tr><td colspan="5" style="text-align:center;color:var(--gray-600)">No hay videos registrados</td></tr>') + '</tbody></table></div></div>';
 }
 
-async function addVideo(e) {
+function submitVideo(e) {
   e.preventDefault();
-  const btn = document.getElementById('btnSubmitV');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
-  try {
-    if (!DATA.videos) DATA.videos = [];
-    DATA.videos.unshift({
-      titulo: document.getElementById('v_titulo').value.trim(),
-      descripcion: document.getElementById('v_desc').value.trim(),
-      categoria: document.getElementById('v_cat').value,
-      url: document.getElementById('v_url').value.trim(),
-      fecha: new Date().toLocaleDateString('es-ES', {year:'numeric',month:'long',day:'numeric'})
-    });
-    await saveDataToGitHub();
-    cacheData();
-    btn.innerHTML = '<i class="fas fa-check"></i> ¡Publicado!';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-    setTimeout(() => renderPage(CURRENT_PAGE), 1500);
-  } catch (err) {
-    alert('❌ Error: ' + err.message);
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Agregar y Publicar';
-    btn.style.background = '';
-    btn.style.borderColor = '';
+  const editIndex = parseInt(document.getElementById('v_edit_index').value);
+  
+  const videoData = {
+    titulo: document.getElementById('v_titulo').value.trim(),
+    descripcion: document.getElementById('v_desc').value.trim(),
+    categoria: document.getElementById('v_cat').value,
+    url: document.getElementById('v_url').value.trim(),
+    fecha: editIndex >= 0 && DATA.videos[editIndex] ? DATA.videos[editIndex].fecha : new Date().toLocaleDateString('es-ES', {year:'numeric',month:'long',day:'numeric'})
+  };
+
+  if (editIndex >= 0) {
+    addPendingChange('edit', 'videos', videoData, editIndex);
+    showToast('success', 'Video editado', 'Los cambios se agregaron a la lista de pendientes.');
+  } else {
+    addPendingChange('add', 'videos', videoData);
+    showToast('success', 'Video agregado', 'El video se agregó a la lista de pendientes.');
   }
+  
+  cancelEditVideo();
+  renderPage(CURRENT_PAGE);
 }
 
-async function deleteVideo(i) {
-  if (!confirm('¿Estás seguro de eliminar este video?')) return;
-  DATA.videos.splice(i, 1);
-  await saveDataToGitHub();
-  cacheData();
+function editVideo(index) {
+  const v = DATA.videos[index];
+  if (!v) return;
+  
+  document.getElementById('v_edit_index').value = index;
+  document.getElementById('v_titulo').value = v.titulo;
+  document.getElementById('v_desc').value = v.descripcion;
+  document.getElementById('v_cat').value = v.categoria;
+  document.getElementById('v_url').value = v.url;
+  
+  document.getElementById('formVideoTitle').innerHTML = '<i class="fas fa-edit" style="color:var(--orange)"></i> Editando: ' + esc(v.titulo);
+  document.getElementById('btnSubmitV').innerHTML = '<i class="fas fa-save"></i> Guardar Cambios';
+  document.getElementById('btnCancelEditV').style.display = 'inline-flex';
+  
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function cancelEditVideo() {
+  document.getElementById('v_edit_index').value = -1;
+  document.getElementById('v_titulo').value = '';
+  document.getElementById('v_desc').value = '';
+  document.getElementById('v_cat').value = (DATA.categorias_recursos || [])[0] || '';
+  document.getElementById('v_url').value = '';
+  document.getElementById('formVideoTitle').innerHTML = '<i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Video';
+  document.getElementById('btnSubmitV').innerHTML = '<i class="fas fa-plus"></i> Agregar a Cambios Pendientes';
+  document.getElementById('btnCancelEditV').style.display = 'none';
+}
+
+function deleteVideo(index) {
+  const v = DATA.videos[index];
+  if (!v) return;
+  if (!confirm('¿Eliminar el video "' + v.titulo + '"?\n\nEl cambio se agregará a la lista de pendientes.')) return;
+  addPendingChange('delete', 'videos', null, index);
+  showToast('success', 'Video marcado para eliminar', 'Ve a "Revisar Cambios" para publicar.');
   renderPage(CURRENT_PAGE);
 }
 
 function renderAdminEventos() {
   let rows = '';
   (DATA.eventos || []).forEach((e, i) => {
+    const canUp = i > 0;
+    const canDown = i < (DATA.eventos || []).length - 1;
     rows += '<tr><td>' + esc(e.titulo) + '</td><td>' + esc(e.fecha) + '</td><td>' + esc(e.lugar) + '</td>' +
-    '<td><button class="btn btn-danger btn-sm" onclick="deleteEvento(' + i + ')"><i class="fas fa-trash"></i> Eliminar</button></td></tr>';
+    '<td>' +
+    '<div class="reorder-btns">' +
+    '<button class="reorder-btn" onclick="moveItem(\'eventos\',' + i + ',-1)" ' + (canUp ? '' : 'disabled') + '><i class="fas fa-chevron-up"></i></button>' +
+    '<button class="reorder-btn" onclick="moveItem(\'eventos\',' + i + ',1)" ' + (canDown ? '' : 'disabled') + '><i class="fas fa-chevron-down"></i></button>' +
+    '</div>' +
+    '</td>' +
+    '<td>' +
+    '<button class="btn btn-info btn-xs" style="margin-right:5px" onclick="editEvento(' + i + ')"><i class="fas fa-edit"></i></button>' +
+    '<button class="btn btn-danger btn-xs" onclick="deleteEvento(' + i + ')"><i class="fas fa-trash"></i></button>' +
+    '</td></tr>';
   });
   return '<div class="card"><h2><i class="fas fa-calendar-alt" style="color:var(--orange)"></i> Gestionar Eventos</h2></div>' +
   '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Eventos</a></div>' +
-  '<div class="card"><h3><i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Evento</h3>' +
-  '<form onsubmit="addEvento(event)">' +
+  renderPendingBar() +
+  '<div class="card"><h3 id="formEventoTitle"><i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Evento</h3>' +
+  '<form onsubmit="submitEvento(event)">' +
+  '<input type="hidden" id="e_edit_index" value="-1">' +
   '<div class="form-group"><label>Título del evento</label><input type="text" id="e_titulo" placeholder="Ej: Seminario de Espíritu de Profecía" required></div>' +
   '<div class="form-group"><label>Fecha</label><input type="text" id="e_fecha" placeholder="Ej: 15 de Diciembre, 2026" required></div>' +
   '<div class="form-group"><label>Hora</label><input type="text" id="e_hora" placeholder="Ej: 10:00 AM" required></div>' +
   '<div class="form-group"><label>Lugar</label><input type="text" id="e_lugar" placeholder="Ej: Templo Central, Misión Villa Perla" required></div>' +
   '<div class="form-group"><label>Descripción</label><textarea id="e_desc" placeholder="Describe el evento..." required></textarea></div>' +
   '<div class="form-group"><label>URL adicional (opcional)</label><input type="url" id="e_url" placeholder="https://..."></div>' +
-  '<button type="submit" class="btn" id="btnSubmitE"><i class="fas fa-cloud-upload-alt"></i> Agregar y Publicar</button>' +
+  '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+  '<button type="submit" class="btn" id="btnSubmitE"><i class="fas fa-plus"></i> Agregar a Cambios Pendientes</button>' +
+  '<button type="button" class="btn btn-black" id="btnCancelEditE" style="display:none" onclick="cancelEditEvento()"><i class="fas fa-times"></i> Cancelar Edición</button>' +
+  '</div>' +
   '</form></div>' +
   '<div class="card"><h3>Eventos existentes (' + (DATA.eventos || []).length + ')</h3>' +
-  '<div class="table-responsive"><table><thead><tr><th>Título</th><th>Fecha</th><th>Lugar</th><th>Acciones</th></tr></thead>' +
-  '<tbody>' + (rows || '<tr><td colspan="4" style="text-align:center;color:var(--gray-600)">No hay eventos registrados</td></tr>') + '</tbody></table></div></div>';
+  '<p style="font-size:.85rem;color:var(--gray-600);margin-bottom:10px"><i class="fas fa-info-circle"></i> Usa las flechas ↑↓ para reordenar.</p>' +
+  '<div class="table-responsive"><table><thead><tr><th>Título</th><th>Fecha</th><th>Lugar</th><th>Orden</th><th>Acciones</th></tr></thead>' +
+  '<tbody>' + (rows || '<tr><td colspan="5" style="text-align:center;color:var(--gray-600)">No hay eventos registrados</td></tr>') + '</tbody></table></div></div>';
 }
 
-async function addEvento(e) {
+function submitEvento(e) {
   e.preventDefault();
-  const btn = document.getElementById('btnSubmitE');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
-  try {
-    if (!DATA.eventos) DATA.eventos = [];
-    DATA.eventos.unshift({
-      titulo: document.getElementById('e_titulo').value.trim(),
-      fecha: document.getElementById('e_fecha').value.trim(),
-      hora: document.getElementById('e_hora').value.trim(),
-      lugar: document.getElementById('e_lugar').value.trim(),
-      descripcion: document.getElementById('e_desc').value.trim(),
-      url: document.getElementById('e_url').value.trim()
-    });
-    await saveDataToGitHub();
-    cacheData();
-    btn.innerHTML = '<i class="fas fa-check"></i> ¡Publicado!';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-    setTimeout(() => renderPage(CURRENT_PAGE), 1500);
-  } catch (err) {
-    alert('❌ Error: ' + err.message);
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Agregar y Publicar';
-    btn.style.background = '';
-    btn.style.borderColor = '';
+  const editIndex = parseInt(document.getElementById('e_edit_index').value);
+  
+  const eventoData = {
+    titulo: document.getElementById('e_titulo').value.trim(),
+    fecha: document.getElementById('e_fecha').value.trim(),
+    hora: document.getElementById('e_hora').value.trim(),
+    lugar: document.getElementById('e_lugar').value.trim(),
+    descripcion: document.getElementById('e_desc').value.trim(),
+    url: document.getElementById('e_url').value.trim()
+  };
+
+  if (editIndex >= 0) {
+    addPendingChange('edit', 'eventos', eventoData, editIndex);
+    showToast('success', 'Evento editado', 'Los cambios se agregaron a la lista de pendientes.');
+  } else {
+    addPendingChange('add', 'eventos', eventoData);
+    showToast('success', 'Evento agregado', 'El evento se agregó a la lista de pendientes.');
   }
+  
+  cancelEditEvento();
+  renderPage(CURRENT_PAGE);
 }
 
-async function deleteEvento(i) {
-  if (!confirm('¿Estás seguro de eliminar este evento?')) return;
-  DATA.eventos.splice(i, 1);
-  await saveDataToGitHub();
-  cacheData();
+function editEvento(index) {
+  const ev = DATA.eventos[index];
+  if (!ev) return;
+  
+  document.getElementById('e_edit_index').value = index;
+  document.getElementById('e_titulo').value = ev.titulo;
+  document.getElementById('e_fecha').value = ev.fecha;
+  document.getElementById('e_hora').value = ev.hora;
+  document.getElementById('e_lugar').value = ev.lugar;
+  document.getElementById('e_desc').value = ev.descripcion;
+  document.getElementById('e_url').value = ev.url || '';
+  
+  document.getElementById('formEventoTitle').innerHTML = '<i class="fas fa-edit" style="color:var(--orange)"></i> Editando: ' + esc(ev.titulo);
+  document.getElementById('btnSubmitE').innerHTML = '<i class="fas fa-save"></i> Guardar Cambios';
+  document.getElementById('btnCancelEditE').style.display = 'inline-flex';
+  
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function cancelEditEvento() {
+  document.getElementById('e_edit_index').value = -1;
+  document.getElementById('e_titulo').value = '';
+  document.getElementById('e_fecha').value = '';
+  document.getElementById('e_hora').value = '';
+  document.getElementById('e_lugar').value = '';
+  document.getElementById('e_desc').value = '';
+  document.getElementById('e_url').value = '';
+  document.getElementById('formEventoTitle').innerHTML = '<i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nuevo Evento';
+  document.getElementById('btnSubmitE').innerHTML = '<i class="fas fa-plus"></i> Agregar a Cambios Pendientes';
+  document.getElementById('btnCancelEditE').style.display = 'none';
+}
+
+function deleteEvento(index) {
+  const ev = DATA.eventos[index];
+  if (!ev) return;
+  if (!confirm('¿Eliminar el evento "' + ev.titulo + '"?\n\nEl cambio se agregará a la lista de pendientes.')) return;
+  addPendingChange('delete', 'eventos', null, index);
+  showToast('success', 'Evento marcado para eliminar', 'Ve a "Revisar Cambios" para publicar.');
   renderPage(CURRENT_PAGE);
 }
 
@@ -1139,6 +1830,7 @@ function renderAdminLibro() {
   const lb = DATA.libro_ano || {};
   return '<div class="card"><h2><i class="fas fa-book" style="color:var(--orange)"></i> Libro del Año ' + new Date().getFullYear() + '</h2></div>' +
   '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Libro del Año</a></div>' +
+  renderPendingBar() +
   '<div class="card"><form onsubmit="saveLibro(event)">' +
   '<div class="form-group"><label>Título del libro</label><input type="text" id="l_titulo" value="' + esc(lb.titulo || '') + '" placeholder="Ej: El Camino a Cristo"></div>' +
   '<div class="form-group"><label>Autor</label><input type="text" id="l_autor" value="' + esc(lb.autor || '') + '" placeholder="Ej: Elena G. de White"></div>' +
@@ -1169,7 +1861,7 @@ function renderAdminLibro() {
   '</div>' +
   '</div>' +
   '<div class="form-group"><label>URL del cuestionario (opcional)</label><input type="url" id="l_cuest" value="' + esc(lb.cuestionario_url || '') + '" placeholder="https://forms.gle/..."></div>' +
-  '<button type="submit" class="btn btn-lg" id="btnSubmitL" style="width:100%;justify-content:center"><i class="fas fa-cloud-upload-alt"></i> Guardar y Publicar</button>' +
+  '<button type="submit" class="btn btn-lg" id="btnSubmitL" style="width:100%;justify-content:center"><i class="fas fa-save"></i> Guardar en Cambios Pendientes</button>' +
   '</form></div>';
 }
 
@@ -1196,7 +1888,6 @@ async function saveLibro(e) {
   e.preventDefault();
   const tipo = document.querySelector('input[name="l_tipo"]:checked').value;
   const btn = document.getElementById('btnSubmitL');
-  const originalHtml = btn.innerHTML;
   let pdfUrl = '';
 
   try {
@@ -1206,7 +1897,7 @@ async function saveLibro(e) {
         const file = fileInput.files[0];
         const validationError = validateFile(file);
         if (validationError) {
-          alert('❌ ' + validationError);
+          showToast('error', 'Error de archivo', validationError);
           return;
         }
         btn.disabled = true;
@@ -1215,19 +1906,12 @@ async function saveLibro(e) {
         pdfUrl = await uploadFileToGitHub(file, 'pdfs', 'progressFillL', 'progressTextL');
       } else {
         pdfUrl = (DATA.libro_ano && DATA.libro_ano.url) || '';
-        if (!pdfUrl) {
-          alert('⚠️ Selecciona un archivo PDF o ingresa una URL.');
-          return;
-        }
       }
     } else {
       pdfUrl = document.getElementById('l_url').value.trim();
     }
 
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
-
-    DATA.libro_ano = {
+    const libroData = {
       titulo: document.getElementById('l_titulo').value.trim(),
       autor: document.getElementById('l_autor').value.trim(),
       descripcion: document.getElementById('l_desc').value.trim(),
@@ -1235,17 +1919,25 @@ async function saveLibro(e) {
       cuestionario_url: document.getElementById('l_cuest').value.trim()
     };
 
-    await saveDataToGitHub();
-    cacheData();
-
-    btn.innerHTML = '<i class="fas fa-check"></i> ¡Publicado correctamente!';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-    setTimeout(() => renderPage(CURRENT_PAGE), 1500);
+    addPendingChange('update_section', 'libro_ano', libroData);
+    
+    btn.innerHTML = '<i class="fas fa-check"></i> ¡Agregado a pendientes!';
+    btn.style.background = 'var(--success)';
+    btn.style.borderColor = 'var(--success)';
+    
+    showToast('success', 'Libro del año actualizado', 'Los cambios se agregaron a la lista de pendientes.');
+    
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-save"></i> Guardar en Cambios Pendientes';
+      btn.style.background = '';
+      btn.style.borderColor = '';
+      btn.disabled = false;
+      renderPage(CURRENT_PAGE);
+    }, 1500);
 
   } catch (err) {
-    alert('❌ Error: ' + err.message);
-    btn.innerHTML = originalHtml;
+    showToast('error', 'Error', err.message);
+    btn.innerHTML = '<i class="fas fa-save"></i> Guardar en Cambios Pendientes';
     btn.disabled = false;
     btn.style.background = '';
     btn.style.borderColor = '';
@@ -1273,36 +1965,37 @@ function renderAdminQuienes() {
   });
   return '<div class="card"><h2><i class="fas fa-users" style="color:var(--orange)"></i> Editar Quiénes Somos</h2></div>' +
   '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Quiénes Somos</a></div>' +
+  renderPendingBar() +
   '<div class="card"><form onsubmit="saveQuienes(event)">' + f +
-  '<button type="submit" class="btn" id="btnSubmitQ"><i class="fas fa-cloud-upload-alt"></i> Actualizar y Publicar</button></form></div>';
+  '<button type="submit" class="btn" id="btnSubmitQ"><i class="fas fa-save"></i> Guardar en Cambios Pendientes</button></form></div>';
 }
 
-async function saveQuienes(e) {
+function saveQuienes(e) {
   e.preventDefault();
   const btn = document.getElementById('btnSubmitQ');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
-  try {
-    DATA.quienes_somos = {
-      titulo: document.getElementById('q_titulo').value.trim(),
-      historia: document.getElementById('q_historia').value.trim(),
-      mision: document.getElementById('q_mision').value.trim(),
-      vision: document.getElementById('q_vision').value.trim(),
-      objetivos: document.getElementById('q_objetivos').value.trim()
-    };
-    await saveDataToGitHub();
-    cacheData();
-    btn.innerHTML = '<i class="fas fa-check"></i> ¡Actualizado!';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-    setTimeout(() => renderPage(CURRENT_PAGE), 1500);
-  } catch (err) {
-    alert('❌ Error: ' + err.message);
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Actualizar y Publicar';
+  
+  const quienesData = {
+    titulo: document.getElementById('q_titulo').value.trim(),
+    historia: document.getElementById('q_historia').value.trim(),
+    mision: document.getElementById('q_mision').value.trim(),
+    vision: document.getElementById('q_vision').value.trim(),
+    objetivos: document.getElementById('q_objetivos').value.trim()
+  };
+  
+  addPendingChange('update_section', 'quienes_somos', quienesData);
+  
+  btn.innerHTML = '<i class="fas fa-check"></i> ¡Agregado a pendientes!';
+  btn.style.background = 'var(--success)';
+  btn.style.borderColor = 'var(--success)';
+  
+  showToast('success', 'Quiénes Somos actualizado', 'Los cambios se agregaron a la lista de pendientes.');
+  
+  setTimeout(() => {
+    btn.innerHTML = '<i class="fas fa-save"></i> Guardar en Cambios Pendientes';
     btn.style.background = '';
     btn.style.borderColor = '';
-  }
+    renderPage(CURRENT_PAGE);
+  }, 1500);
 }
 
 function renderAdminInfo() {
@@ -1322,38 +2015,39 @@ function renderAdminInfo() {
   });
   return '<div class="card"><h2><i class="fas fa-info-circle" style="color:var(--orange)"></i> Información General</h2></div>' +
   '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Información</a></div>' +
+  renderPendingBar() +
   '<div class="card"><form onsubmit="saveInfo(event)">' + f +
-  '<button type="submit" class="btn" id="btnSubmitI"><i class="fas fa-cloud-upload-alt"></i> Actualizar y Publicar</button></form></div>';
+  '<button type="submit" class="btn" id="btnSubmitI"><i class="fas fa-save"></i> Guardar en Cambios Pendientes</button></form></div>';
 }
 
-async function saveInfo(e) {
+function saveInfo(e) {
   e.preventDefault();
   const btn = document.getElementById('btnSubmitI');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
-  try {
-    DATA.informacion = {
-      direccion: document.getElementById('i_direccion').value.trim(),
-      telefono: document.getElementById('i_telefono').value.trim(),
-      email: document.getElementById('i_email').value.trim(),
-      horario: document.getElementById('i_horario').value.trim(),
-      coordinador: document.getElementById('i_coordinador').value.trim(),
-      facebook: document.getElementById('i_facebook').value.trim(),
-      youtube: document.getElementById('i_youtube').value.trim()
-    };
-    await saveDataToGitHub();
-    cacheData();
-    btn.innerHTML = '<i class="fas fa-check"></i> ¡Actualizado!';
-    btn.style.background = '#27ae60';
-    btn.style.borderColor = '#27ae60';
-    setTimeout(() => renderPage(CURRENT_PAGE), 1500);
-  } catch (err) {
-    alert('❌ Error: ' + err.message);
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-cloud-upload-alt"></i> Actualizar y Publicar';
+  
+  const infoData = {
+    direccion: document.getElementById('i_direccion').value.trim(),
+    telefono: document.getElementById('i_telefono').value.trim(),
+    email: document.getElementById('i_email').value.trim(),
+    horario: document.getElementById('i_horario').value.trim(),
+    coordinador: document.getElementById('i_coordinador').value.trim(),
+    facebook: document.getElementById('i_facebook').value.trim(),
+    youtube: document.getElementById('i_youtube').value.trim()
+  };
+  
+  addPendingChange('update_section', 'informacion', infoData);
+  
+  btn.innerHTML = '<i class="fas fa-check"></i> ¡Agregado a pendientes!';
+  btn.style.background = 'var(--success)';
+  btn.style.borderColor = 'var(--success)';
+  
+  showToast('success', 'Información actualizada', 'Los cambios se agregaron a la lista de pendientes.');
+  
+  setTimeout(() => {
+    btn.innerHTML = '<i class="fas fa-save"></i> Guardar en Cambios Pendientes';
     btn.style.background = '';
     btn.style.borderColor = '';
-  }
+    renderPage(CURRENT_PAGE);
+  }, 1500);
 }
 
 function renderAdminCategorias() {
@@ -1365,42 +2059,45 @@ function renderAdminCategorias() {
   });
   return '<div class="card"><h2><i class="fas fa-tags" style="color:var(--orange)"></i> Gestionar Categorías</h2></div>' +
   '<div class="admin-nav"><a onclick="navigate(\'admin_dashboard\');return false;">← Dashboard</a><a class="active">Categorías</a></div>' +
+  renderPendingBar() +
   '<div class="card"><h3><i class="fas fa-plus-circle" style="color:var(--orange)"></i> Agregar Nueva Categoría</h3>' +
   '<form onsubmit="addCategoria(event)">' +
   '<div class="form-group"><label>Nombre de la categoría</label><input type="text" id="c_nombre" placeholder="Ej: Evangelismo" required></div>' +
-  '<button type="submit" class="btn"><i class="fas fa-plus"></i> Agregar Categoría</button>' +
+  '<button type="submit" class="btn"><i class="fas fa-plus"></i> Agregar a Cambios Pendientes</button>' +
   '</form></div>' +
   '<div class="card"><h3>Categorías existentes (' + (DATA.categorias_recursos || []).length + ')</h3>' +
   (cards || '<p style="text-align:center;color:var(--gray-600);padding:2rem">No hay categorías definidas.</p>') + '</div>';
 }
 
-async function addCategoria(e) {
+function addCategoria(e) {
   e.preventDefault();
   const nombre = document.getElementById('c_nombre').value.trim();
   if (!nombre) return;
   if ((DATA.categorias_recursos || []).includes(nombre)) {
-    alert('⚠️ Esa categoría ya existe.');
+    showToast('warning', 'Categoría duplicada', 'Esa categoría ya existe.');
     return;
   }
-  if (!DATA.categorias_recursos) DATA.categorias_recursos = [];
-  DATA.categorias_recursos.push(nombre);
-  await saveDataToGitHub();
-  cacheData();
+  addPendingChange('add', 'categorias_recursos', {nombre: nombre});
+  showToast('success', 'Categoría agregada', 'La categoría se agregó a la lista de pendientes.');
+  document.getElementById('c_nombre').value = '';
   renderPage(CURRENT_PAGE);
 }
 
-async function deleteCategoria(i) {
-  const cat = DATA.categorias_recursos[i];
+function deleteCategoria(index) {
+  const cat = DATA.categorias_recursos[index];
   const usedInRecursos = (DATA.recursos || []).filter(r => r.categoria === cat).length;
   const usedInVideos = (DATA.videos || []).filter(v => v.categoria === cat).length;
   let msg = '¿Eliminar la categoría "' + cat + '"?';
   if (usedInRecursos > 0 || usedInVideos > 0) {
-    msg += '\n\n⚠️ ATENCIÓN: Hay ' + usedInRecursos + ' recurso(s) y ' + usedInVideos + ' video(s) en esta categoría. Si la eliminas, esos elementos dejarán de mostrarse en las listas públicas.';
+    msg += '\n\n⚠️ ATENCIÓN: Hay ' + usedInRecursos + ' recurso(s) y ' + usedInVideos + ' video(s) en esta categoría.';
   }
+  msg += '\n\nEl cambio se agregará a la lista de pendientes.';
   if (!confirm(msg)) return;
-  DATA.categorias_recursos.splice(i, 1);
-  await saveDataToGitHub();
-  cacheData();
+  
+  const nuevasCategorias = [...DATA.categorias_recursos];
+  nuevasCategorias.splice(index, 1);
+  addPendingChange('update_section', 'categorias_recursos', nuevasCategorias);
+  showToast('success', 'Categoría marcada para eliminar', 'Ve a "Revisar Cambios" para publicar.');
   renderPage(CURRENT_PAGE);
 }
 
@@ -1426,7 +2123,7 @@ async function adminLogin() {
   const token = document.getElementById('adminTokenInput').value.trim();
   const repo = document.getElementById('adminRepoInput').value.trim();
   if (!token || !repo) {
-    alert('⚠️ Por favor completa ambos campos: Token y Repositorio.');
+    showToast('warning', 'Campos requeridos', 'Por favor completa ambos campos: Token y Repositorio.');
     return;
   }
   try {
@@ -1442,33 +2139,39 @@ async function adminLogin() {
     localStorage.setItem('gh_token', token);
     localStorage.setItem('gh_repo', repo);
     ADMIN_MODE = true;
+    loadPendingFromLocal();
+    loadHistory();
     closeAdminLogin();
     navigate('admin_dashboard');
+    checkGitHubConnection();
+    showToast('success', 'Sesión iniciada', 'Bienvenido al panel de administración.');
   } catch (e) {
-    alert('❌ Error de autenticación: ' + e.message + '\n\nVerifica que:\n1. El token sea correcto.\n2. El token tenga permisos "Contents: Read and write".\n3. El nombre del repositorio sea correcto (usuario/nombre).');
+    showToast('error', 'Error de autenticación', e.message);
   }
 }
 
 function adminLogout() {
-  if (!confirm('¿Cerrar sesión de administrador?')) return;
+  if (!confirm('¿Cerrar sesión de administrador?\n\nLos cambios pendientes se guardarán y podrás continuar cuando vuelvas a entrar.')) return;
   CONFIG.token = '';
   CONFIG.repo = '';
   ADMIN_MODE = false;
   localStorage.removeItem('gh_token');
   localStorage.removeItem('gh_repo');
   navigate('index');
+  showToast('info', 'Sesión cerrada', 'Has salido del modo administrador.');
 }
 
 async function forceReloadData() {
+  showToast('info', 'Recargando...', 'Obteniendo datos actualizados desde GitHub.');
   await loadData();
   cacheData();
   renderPage(CURRENT_PAGE);
-  alert('✅ Datos recargados. Fuente: ' + DATA_SOURCE);
+  showToast('success', 'Datos recargados', 'Fuente: ' + DATA_SOURCE);
 }
 
 async function saveDataToGitHub() {
   if (!CONFIG.token || !CONFIG.repo) {
-    alert('⚠️ No hay sesión de administrador activa.');
+    showToast('error', 'No autenticado', 'No hay sesión de administrador activa.');
     openAdminLogin();
     throw new Error('No autenticado');
   }
@@ -1538,6 +2241,9 @@ async function init() {
 
   if (CONFIG.token && CONFIG.repo) {
     ADMIN_MODE = true;
+    loadPendingFromLocal();
+    loadHistory();
+    checkGitHubConnection();
   }
 
   const page = getHashPage();
